@@ -1,0 +1,14 @@
+@import '../../styles/mixins.scss';
+
+.about {
+    @include res('padding-top', 120px);
+    @include res('padding-left', 110px);
+    @include res('padding-right', 110px);
+    @include res('padding-bottom', 43px);
+    position: relative;
+}
+
+.cube {
+    position: absolute;
+    @include res('top', 0px);
+}

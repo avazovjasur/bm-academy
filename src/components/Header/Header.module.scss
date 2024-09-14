@@ -1,0 +1,131 @@
+@import '../../styles/mixins.scss';
+
+.header {
+    background-color: white;
+    width: 100%;
+    @include res('padding-left', 113px);
+    @include res('padding-right', 113px);
+    @include res('height', 96px);
+    position: fixed;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.left {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @include res('gap', 40px);
+}
+
+.logo {
+    @include res('width', 160px);
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include res('gap', 32px);
+
+    .btn {
+        font-family: Onest;
+        @include res('font-size', 16px);
+        @include res('line-height', 19.2px);
+        font-weight: 500;
+    }
+}
+
+.dropDown {
+    position: relative;
+
+    &Lang {
+        border: solid #E8ECF5;
+        @include res('border-width', 1px);
+    }
+
+    &:hover .dropDownInner {
+        opacity: 1;
+        pointer-events: all;
+    }
+
+    &Label {
+        position: relative;
+        @include res('padding', 14px);
+        @include res('padding-right', 12px);
+        @include res('padding-left', 16px);
+        @include res('gap', 10px);
+        @include res('border-radius', 44px);
+        background-color: #F6F7F8;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: Onest;
+        @include res('font-size', 16px);
+        font-weight: 500;
+
+        svg {
+            @include res('width', 20px);
+            @include res('height', 20px);
+        }
+    }
+
+    &Inner {
+        @include res('min-width', 140px);
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translate(-50%, 100%);
+        background-color: #F6F7F8;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        @include res('border-radius', 20px);
+        overflow: hidden;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 200ms;
+        border: solid #E8ECF5;
+        @include res('border-width', 1px);
+    }
+
+    &Btn {
+        width: 100%;
+        background-color: white;
+        @include res('padding', 14px);
+        @include res('padding-right', 12px);
+        @include res('padding-left', 16px);
+        font-family: Onest;
+        @include res('font-size', 14px);
+        @include res('line-height', 16.2px);
+        font-weight: 500;
+
+        &:hover {
+            background-color: #e4e4e4;
+        }
+    }
+}
+
+.right {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @include res('gap', 6px);
+
+    .order {
+        @include res('padding', 14px);
+        @include res('padding-right', 16px);
+        @include res('padding-left', 16px);
+        @include res('gap', 10px);
+        @include res('border-radius', 46px);
+        background-color: #9D3BFF;
+        color: white;
+        font-family: Onest;
+        @include res('font-size', 17px);
+        @include res('line-height', 20px);
+        font-weight: 500;
+    }
+}
