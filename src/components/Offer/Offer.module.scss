@@ -307,8 +307,11 @@
 }
 
 .bgImg {
+    @include res('width', 761px);
+    @include res('height', 847px);
     position: absolute;
-    @include res('bottom', -200px);
-    @include res('right', -100px);
+    @include res('bottom', -250px);
+    @include res('right', -120px);
     z-index: 1;
+    pointer-events: none;
 }

@@ -2,7 +2,7 @@ import styles from './Offer.module.scss'
 
 const Offer = () => {
     return <section className={styles.offer}>
-        <img src="offerBg.png" alt="" className={styles.bgImg} />
+        <img draggable='false' src="offerBg.png" alt="" className={styles.bgImg} />
         <div className={styles.cards}>
             <div className={styles.weOffer}>
                 <p className={styles.text}>Что мы предлагаем</p>
