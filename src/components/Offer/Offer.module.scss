@@ -1,0 +1,291 @@
+@import '../../styles/mixins.scss';
+
+.offer {
+    display: flex;
+    margin: auto;
+    @include res('width', 1240px);
+    @include res('padding-top', 53px);
+    @include res('padding-left', 56px);
+    @include res('padding-right', 56px);
+    @include res('padding-bottom', 116px);
+    background-color: #202020;
+    @include res('margin-top', 50px);
+    @include res('margin-bottom', 100px);
+    @include res('border-radius', 40px);
+    display: flex;   
+}
+
+.cards {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+.weOffer {
+    @include res('width', 744px);
+    @include res('height', 360px);
+    background-color: #9D3BFF;
+    @include res('border-radius', 32px);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    @include res('padding', 32px);
+    @include res('margin-right', 24px);
+
+    .text {
+        @include res('width', 419px);
+        color: white;
+        @include res('font-size', 48px);
+        @include res('line-height', 61.25px);
+        font-weight: 700;
+        text-align: left;
+        cursor: default;
+    }
+
+    .offers {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        @include res('gap', 8px);
+
+        p {
+            display: block;
+            box-shadow: 0px 4px 16px 0px #0000001F;
+            @include res('border-radius', 16px);
+            @include res('padding', 16px);
+            border: solid white;
+            @include res('border-width', 1px);
+            background: linear-gradient(103.7deg, rgba(255, 255, 255, 0.37) -7.84%, rgba(255, 255, 255, 0.13) 116.67%);
+            font-family: Rubik;
+            @include res('font-size', 21px);
+            @include res('line-height', 25.2px);
+            font-weight: 400;
+            text-align: left;
+            color: white;
+            cursor: default;
+        }
+    }
+}
+
+.drawings {
+    @include res('width', 360px);
+    @include res('height', 744px);
+    background-image: url(../../../public/drawings.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    @include res('border-radius', 32px);
+    overflow: hidden;
+
+    .container {
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(180deg, #000000 -7.39%, rgba(0, 0, 0, 0.05) 100%);
+        position: relative;
+        @include res('padding-top', 103px);
+        @include res('padding-left', 33px);
+        @include res('padding-right', 40px);
+    }
+
+    .link {
+        border-radius: 50%;
+        background-color: white;
+        @include res('width', 68px);
+        @include res('height', 68px);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        @include res('top', 24px);
+        @include res('right', 24px);
+        cursor: pointer;
+
+        svg {
+            @include res('width', 44px);
+            @include res('height', 44px);
+        }
+    }
+
+    p {
+        font-family: Onest;
+        @include res('font-size', 44px);
+        @include res('line-height', 52.8px);
+        font-weight: 300;
+        letter-spacing: -0.025em;
+        text-align: left;
+        color: white;
+        text-transform: uppercase;
+
+        span {
+            color: #9D3BFF;
+        }
+    }
+}
+
+.picture {
+    @include res('width', 360px);
+    @include res('height', 540px);
+    background-image: url(../../../public/picture.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    @include res('border-radius', 32px);
+    overflow: hidden;
+    @include res('margin-top', -360px);
+    @include res('margin-right', 24px);
+    @include res('margin-bottom', 24px);
+
+    .container {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.logo {
+    @include res('width', 360px);
+    @include res('height', 360px);
+    @include res('border-radius', 32px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #9D3BFF;
+    @include res('margin-top', -360px);
+    @include res('margin-right', 360px);
+
+    svg {
+        @include res('width', 261px);
+        @include res('height', 72px);
+    }
+}
+
+.date {
+    @include res('width', 360px);
+    @include res('height', 180px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #9D3BFF;
+    @include res('border-radius', 32px);
+    @include res('margin-right', 24px);
+    
+    p {
+        color: white;
+
+        &:first-child {
+            @include res('font-size', 44px);
+            @include res('line-height', 43.12px);
+            font-weight: 600;
+            @include res('letter-spacing', -0.4px);
+            text-align: left;
+            text-transform: uppercase;
+        }
+
+        &:last-child {
+            font-family: Onest;
+            @include res('font-size', 21px);
+            @include res('line-height', 25.2px);
+            font-weight: 400;
+            letter-spacing: -0.025em;
+            text-align: left;
+        }
+    }
+}
+
+.stats {
+    @include res('width', 360px);
+    @include res('height', 360px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include res('margin-top', -180px);
+    background-color: #fff;
+    background-color: #001523;
+    @include res('border-radius', 32px);
+    border: solid rgba(255, 255, 255, 0.3);
+    @include res('border-width', 1px);
+    @include res('margin-right', 24px);
+
+    &Img {
+        @include res('width', 278px);
+        @include res('height', 308px);
+        object-fit: cover;
+    }
+}
+
+.duration {
+    @include res('width', 360px);
+    @include res('height', 360px);
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    @include res('margin-top', -180px);
+    background-color: #fff;
+    background-color: #001523;
+    @include res('border-radius', 32px);
+    border: solid rgba(255, 255, 255, 0.3);
+    @include res('border-width', 1px);
+    overflow: hidden;
+
+    .heading {
+        @include res('width', 360px);
+        @include res('height', 180px);
+        background-color: #9D3BFF;
+        @include res('border-radius', 32px);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        @include res('margin-bottom', 20px);
+
+        p {
+            color: white;
+
+            &:first-child {
+                @include res('font-size', 44px);
+                @include res('line-height', 43.12px);
+                @include res('letter-spacing', -0.4px);
+                font-weight: 600;
+                text-align: left;
+            }
+
+            &:last-child {
+                font-family: Onest;
+                @include res('font-size', 21px);
+                @include res('line-height', 25.2px);
+                font-weight: 400;
+                letter-spacing: -0.025em;
+                text-align: left;
+            }
+        }
+    }
+
+    .text {
+        @include res('padding-left', 20px);
+        @include res('padding-right', 20px);
+        font-family: Onest;
+        @include res('font-size', 17px);
+        @include res('line-height', 24.48px);
+        font-weight: 400;
+        text-align: left;
+        color: white;
+        @include res('margin-bottom', 16px);
+    }
+
+    .btn {
+        @include res('margin-left', 20px);
+        background-color: white;
+        @include res('padding', 12px);
+        @include res('padding-left', 24px);
+        @include res('padding-right', 24px);
+        color: black;
+        @include res('border-radius', 48px);
+        font-family: Rubik;
+        @include res('font-size', 17px);
+        @include res('line-height', 24.48px);
+        font-weight: 400;
+        text-align: left;        
+    }
+}
