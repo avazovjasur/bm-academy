@@ -2,6 +2,7 @@ import styles from './Offer.module.scss'
 
 const Offer = () => {
     return <section className={styles.offer}>
+        <img src="offerBg.png" alt="" className={styles.bgImg} />
         <div className={styles.cards}>
             <div className={styles.weOffer}>
                 <p className={styles.text}>Что мы предлагаем</p>
@@ -41,7 +42,7 @@ const Offer = () => {
                 <p>Старт курса</p>
             </div>
             <div className={styles.stats}>
-                <img src="stats.png" alt="" className={styles.statsImg} />
+                <img draggable='false' src="stats.png" alt="" className={styles.statsImg} />
             </div>
             <div className={styles.duration}>
                 <div className={styles.heading}>
@@ -59,6 +60,9 @@ const Offer = () => {
                     Подробнее
                 </button>
             </div>
+            <p className={styles.mainText}>
+                <span>Быстрота и технологии:</span> Мы используем передовые Методы, чтобы сделать процесс обучения сделать максимально быстрым и эффективным.
+            </p>
         </div>
     </section>
 }

@@ -12,7 +12,8 @@
     @include res('margin-top', 50px);
     @include res('margin-bottom', 100px);
     @include res('border-radius', 40px);
-    display: flex;   
+    display: flex;
+    position: relative;
 }
 
 .cards {
@@ -288,4 +289,26 @@
         font-weight: 400;
         text-align: left;        
     }
+}
+
+.mainText {
+    color: white;
+    font-family: Onest;
+    @include res('font-size', 56px);
+    @include res('line-height', 80.64px);
+    font-weight: 600;
+    text-align: left;
+    @include res('margin-top', 56px);
+    @include res('width', 903px);
+
+    span {
+        color: #9D3BFF;
+    }
+}
+
+.bgImg {
+    position: absolute;
+    @include res('bottom', -200px);
+    @include res('right', -100px);
+    z-index: 1;
 }
