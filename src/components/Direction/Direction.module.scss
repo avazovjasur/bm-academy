@@ -1,0 +1,94 @@
+@import '../../styles/mixins.scss';
+
+.direction {
+    @include res('width', 1226px);
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    @include res('padding-top', 100px);
+}
+
+.label {
+    font-family: Onest;
+    @include res('font-size', 21px);
+    @include res('line-height', 24px);
+    font-weight: 500;
+    text-align: left;
+    color: white;
+    @include res('padding', 12px);
+    @include res('padding-left', 16px);
+    @include res('padding-right', 16px);
+    background-color: #9D3BFF;
+    @include res('border-radius', 60px);
+    @include res('margin-bottom', 16px);
+}
+
+.title {
+    font-family: Onest;
+    @include res('font-size', 48px);
+    @include res('line-height', 56px);
+    font-weight: 700;
+    text-align: left;
+    color: white;
+    @include res('margin-bottom', 20px);
+}
+
+.cards {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    @include res('height', 440px);
+
+    &:not(:hover) .card:nth-child(2) {
+        @include res('width', 360px);
+    }
+
+    .card {
+        @include res('width', 278.66px);
+        height: 100%;
+        background-color: red;
+        @include res('border-radius', 24px);
+        @include res('margin-right', -40px);
+        transition: all 200ms;
+
+        .index {
+            font-family: Onest;
+            @include res('font-size', 48px);
+            @include res('line-height', 56px);
+            font-weight: 700;
+            text-align: left;
+        }
+
+        &:hover {
+            @include res('width', 360px);
+        }
+
+        &:nth-child(1) {
+            @include res('width', 216px);
+            background-color: white;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            @include res('padding-left', 24px);
+            @include res('margin-right', -66px);
+            pointer-events: none;
+
+            img {
+                @include res('width', 122px);
+                @include res('height', 124px);
+            }
+        }
+
+        &:nth-child(2) {
+            background: #9D3BFF;
+            z-index: 4;
+        }
+
+        &:nth-child(3) {
+            background: #503967;
+            z-index: 3;
+        }
+    }
+}

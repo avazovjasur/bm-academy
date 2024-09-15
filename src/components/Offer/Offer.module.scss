@@ -1,6 +1,13 @@
 @import '../../styles/mixins.scss';
 
 .offer {
+    width: 100%;
+    @include res('padding-top', 50px);
+    @include res('padding-bottom', 100px);
+    overflow: hidden;
+}
+
+.container {
     display: flex;
     margin: auto;
     @include res('width', 1240px);
@@ -8,12 +15,9 @@
     @include res('padding-left', 56px);
     @include res('padding-right', 56px);
     @include res('padding-bottom', 116px);
-    background-color: #202020;
-    @include res('margin-top', 50px);
-    @include res('margin-bottom', 100px);
     @include res('border-radius', 40px);
-    display: flex;
     position: relative;
+    background-color: #202020;
 }
 
 .cards {
@@ -80,7 +84,7 @@
     @include res('border-radius', 32px);
     overflow: hidden;
 
-    .container {
+    .drawingsContainer {
         width: 100%;
         height: 100%;
         background: linear-gradient(180deg, #000000 -7.39%, rgba(0, 0, 0, 0.05) 100%);
