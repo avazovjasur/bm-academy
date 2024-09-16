@@ -13,7 +13,7 @@
     background-size: cover;
 
     @include media(392) {
-        min-height: 100vh;
+        @include resa('height', 816px);
         background-position: center;
     }
 
