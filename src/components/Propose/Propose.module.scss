@@ -79,7 +79,7 @@
         width: 100%;
         @include resa('border-radius', 24px);
         @include resa('padding', 32px);
-        @include resa('height', 360px);
+        @include resa('height', 200px);
     }
     &.big{
         @include res('height', 440px);

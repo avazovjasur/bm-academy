@@ -1,0 +1,90 @@
+@import '@/styles/mixins.scss';
+.text{
+    width: 100%;
+    overflow: hidden;
+    @include res('padding-bottom', 80px);
+    @include media(576){
+        @include resa('padding-bottom', 25px);
+    }
+}
+.container{
+    margin-left: auto;
+    margin-right: auto;
+    background: #202020;
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    @include res('width', 1242px);
+    @include res('border-radius', 40px);
+    @include res('padding', 100px);
+    @include res('padding-left', 56px);
+    @include res('padding-right', 56px);
+    @include media(576){
+        @include resa('padding', 32px);
+        @include resa('padding-left', 16px);
+        @include resa('padding-right', 16px);
+        @include resa('width', 344px);
+        @include resa('padding-bottom', 415px);
+    }
+    img{
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 100%;
+        object-fit: cover;
+        z-index: -1;
+        @include res('width', 487px);
+        @include media(576){    
+            width: 100%;
+            bottom: 0;
+            top: auto;
+            @include resa('height', 382px);
+        }
+    }
+}
+.title{
+    line-height: 132%;
+    font-weight: 600;
+    color: #fff;
+    text-transform: uppercase;
+    @include res('margin-bottom', 32px);
+    @include res('max-width', 786px);
+    @include res('font-size', 44px);
+    @include media(576){
+        @include resa('margin-bottom', 32px);
+        max-width: 100%;
+        @include resa('font-size', 21px);
+    }
+}
+.btn{
+    background: #9D3BFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    width: max-content;
+    @include res('font-size', 16px);
+    @include res('border-radius', 80px);
+    @include res('gap', 10px);
+    @include res('padding-top', 12px);
+    @include res('padding-bottom', 12px);
+    @include res('padding-left', 30px);
+    @include res('padding-right', 30px);
+    @include media(576){
+        @include resa('font-size', 16px);
+        @include resa('border-radius', 80px);
+        @include resa('gap', 10px);
+        @include resa('padding-top', 12px);
+        @include resa('padding-bottom', 12px);
+        @include resa('padding-left', 30px);
+        @include resa('padding-right', 30px);
+    }
+    svg{
+        @include res('width', 32px);
+        @include res('height', 32px);
+        @include media(576){
+            @include resa('width', 32px);
+            @include resa('height', 32px);
+        }
+    }
+}
