@@ -1,0 +1,153 @@
+@import '@/styles/mixins.scss';
+.footer{
+    color: #fff;
+    @include res('padding-top', 80px);
+    @include res('padding-bottom', 80px);
+    @include media(576){
+        @include resa('padding-top', 80px);
+        @include resa('padding-bottom', 80px);
+    }
+}
+.container{
+    margin-left: auto;
+    margin-right: auto;
+    @include res('width', 1242px);
+    @include media(576){
+        @include resa('width', 344px);
+    }
+}
+.top{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    @include res('gap', 30px);
+    @include media(576){
+        flex-direction: column;
+        align-items: center;
+        @include resa('gap', 30px);
+    }
+}
+.col{
+    width: 25%;
+    @include media(576){
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    &:last-child{
+        width: 15%;
+        @include media(576){
+            width: 100%;
+        }
+    }
+    &:nth-child(3){
+        width: 15%;
+        @include media(576){
+            width: 100%;
+        }
+    }
+    &:nth-child(4){
+        width: 20%;
+        @include media(576){
+            width: 100%;
+        }
+    }
+}
+.logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 0;
+    @include res('width', 160px);
+    @include res('height', 44px);
+    @include res('margin-bottom', 16px);
+    @include media(576){
+        @include resa('width', 160px);
+        @include resa('height', 44px);
+        @include resa('margin-bottom', 16px);
+    }
+}
+.p{
+    @include res('font-size', 15px);
+    color: #C388FE;
+    @include media(576){
+        @include resa('font-size', 15px);
+        text-align: center;
+    }
+}
+.title{
+    font-weight: 700;
+    color: #C388FE;
+    @include res('margin-bottom', 8px);
+    @include res('font-size', 17px);
+    @include media(576){
+        @include resa('margin-bottom', 8px);
+        @include resa('font-size', 17px);
+        text-align: center;
+    }
+}
+.link{
+    line-height: 140%;
+    @include res('font-size', 16px);
+    @include media(576){
+        text-align: center;
+        @include resa('font-size', 16px);
+    }
+}
+.soc{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    @include res('gap', 8px);
+    @include media(576){
+        @include resa('gap', 8px);
+    }
+    &Link{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        line-height: 0;
+        @include res('width', 40px);
+        @include res('height', 40px);
+        @include media(576){
+            @include resa('width', 40px);
+            @include resa('height', 40px);
+        }
+        img,svg{
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+
+.brand{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: max-content;
+    margin-left: auto;  
+    margin-right: auto;
+    @include res('padding-top', 50px);
+    @include res('gap', 12px);
+    @include media(576){
+        @include resa('padding-top', 50px);
+        @include resa('gap', 12px);
+    }
+    svg{
+        @include res('width', 150px);
+        @include res('height', 40px);
+        @include media(576){
+            @include resa('width', 150px);
+            @include resa('height', 40px);
+        }
+    }
+    p{
+        color: #fff;
+        @include res('font-size', 14px);
+        @include media(576){
+            @include resa('font-size', 14px);
+        }
+    }
+}

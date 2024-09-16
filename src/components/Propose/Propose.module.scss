@@ -1,0 +1,128 @@
+@import '@/styles/mixins.scss';
+.propose{
+    width: 100%;
+    @include res('padding-bottom', 96px);
+    @include media(576){
+        @include resa('padding-bottom', 80px);
+    }
+}
+.container{
+    margin-left: auto;
+    margin-right: auto;
+    @include res('width', 1242px);
+    @include media(576){
+        @include resa('width', 344px);
+    }
+}
+.tag{
+    background: #9D3BFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: max-content;
+    border-radius: 60px;
+    color: #fff;
+    @include res('margin-bottom', 16px);
+    @include res('padding', 12px);
+    @include res('padding-left', 16px);
+    @include res('padding-right', 16px);
+    @include res('font-size', 21px);
+    @include media(576){
+        @include resa('margin-bottom', 16px);
+        @include resa('padding', 12px); 
+        @include resa('padding-left', 16px);
+        @include resa('padding-right', 16px);
+        @include resa('font-size', 21px);
+    }
+}
+.title{
+    font-weight: 700;
+    color: #fff;
+    @include res('font-size', 48px);
+    @include res('margin-bottom', 32px);
+    @include media(576){
+        @include resa('font-size', 40px);
+        @include resa('margin-bottom', 32px);
+    }
+}
+.grid{
+    display: flex;
+    @include res('gap', 16px);
+    @include media(576){
+        flex-direction: column;
+        @include resa('gap', 16px);
+    }
+}
+.col{
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    @include res('gap', 16px);
+    @include media(576){
+        width: 100%;
+        @include resa('gap', 16px);
+    }
+}
+.item{
+    position: relative;
+    isolation: isolate;
+    width: 100%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    overflow: hidden;
+    @include res('border-radius', 24px);
+    @include res('padding', 32px);
+    @include media(576){
+        width: 100%;
+        @include resa('border-radius', 24px);
+        @include resa('padding', 32px);
+        @include resa('height', 200px);
+    }
+    &.big{
+        @include res('height', 440px);
+        width: 35%;
+        @include media(576){
+            width: 100%;
+            @include resa('height', 360px);
+        }
+    }
+    img{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        line-height: 0;
+        z-index: -1;
+        object-fit: cover;
+    }
+    &Title{
+        color: #fff;
+        font-weight: 600;
+        @include res('font-size', 42px);
+        @include media(576){
+            @include resa('font-size', 32px);
+        }
+    }
+    &Btn{
+        @include res('padding-top', 16px);
+        @include res('padding-bottom', 16px);
+        @include res('padding-left', 24px);
+        @include res('padding-right', 24px);
+        @include res('border-radius', 44px);
+        @include res('font-size', 17px);
+        color: #fff;
+        background: #9D3BFF;
+        @include media(576){
+            @include resa('padding-top', 16px);
+            @include resa('padding-bottom', 16px);
+            @include resa('padding-left', 24px);
+            @include resa('padding-right', 24px);
+            @include resa('border-radius', 44px);
+            @include resa('font-size', 17px);
+        }
+    }
+}

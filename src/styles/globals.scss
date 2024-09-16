@@ -9,7 +9,7 @@
   box-sizing: border-box;
   font-family: "Space Grotesk", sans-serif;
   scroll-behavior: smooth;
-
+  -webkit-tap-highlight-color: transparent;
   &::-webkit-scrollbar {
     width: 0;
   }
