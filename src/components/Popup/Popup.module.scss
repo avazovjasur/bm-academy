@@ -34,11 +34,21 @@
     @include res('padding', 30px);
     @include res('width', 360px);
     @include res('gap', 12px);
+    @include media(576){
+        @include resa('border-radius', 12px);
+        @include resa('padding', 30px);
+        @include resa('width', 360px);
+        @include resa('gap', 12px);
+    }
 }
 .title{
     text-align: center;
     @include res('margin-bottom', 18px);
     @include res('font-size', 24px);
+    @include media(576){
+        @include resa('margin-bottom', 18px);
+        @include resa('font-size', 24px);
+    }
 }
 .input{
     width: 100%;
@@ -48,6 +58,13 @@
     @include res('height', 50px);
     @include res('border-radius', 14px);
     @include res('font-size', 14px);
+    @include media(576){
+        @include resa('padding-left', 12px);
+        @include resa('padding-right', 12px);
+        @include resa('height', 50px);
+        @include resa('border-radius', 14px);
+        @include resa('font-size', 14px);
+    }
     select{
         width: 100%;
         height: 100%;
@@ -65,4 +82,11 @@
     @include res('padding-right', 12px);
     @include res('height', 50px);
     @include res('border-radius', 14px);
+    @include media(576){
+        @include resa('font-size', 16px);
+        @include resa('padding-left', 12px);
+        @include resa('padding-right', 12px);
+        @include resa('height', 50px);
+        @include resa('border-radius', 14px);
+    }
 }

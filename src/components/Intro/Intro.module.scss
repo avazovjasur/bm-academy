@@ -13,7 +13,7 @@
     background-size: cover;
 
     @include media(392) {
-        min-height: 100vh;
+        @include resa('height', 816px);
         background-position: center;
     }
 
@@ -62,8 +62,9 @@
         @include media(392) {
             @include resa('font-size', 54px);
             line-height: 100%;
-            letter-spacing: -2%;
+            @include resa('letter-spacing', -2px);
             @include resa('margin-bottom', 16px);
+            text-transform: uppercase;
         }
     }
 
