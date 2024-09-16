@@ -41,54 +41,135 @@
     justify-content: flex-start;
     @include res('height', 440px);
 
-    &:not(:hover) .card:nth-child(2) {
-        @include res('width', 360px);
-    }
-
-    .card {
-        @include res('width', 278.66px);
+    .activeBlocks {
+        display: flex;
+        align-items: center;
+        justify-content: center;
         height: 100%;
-        background-color: red;
-        @include res('border-radius', 24px);
-        @include res('margin-right', -40px);
-        transition: all 200ms;
 
-        .index {
-            font-family: Onest;
-            @include res('font-size', 48px);
-            @include res('line-height', 56px);
-            font-weight: 700;
-            text-align: left;
-        }
-
-        &:hover {
+        &:not(:hover) .card:nth-child(1) {
             @include res('width', 360px);
-        }
 
-        &:nth-child(1) {
-            @include res('width', 216px);
-            background-color: white;
-            display: flex;
-            align-items: center;
-            justify-content: flex-start;
-            @include res('padding-left', 24px);
-            @include res('margin-right', -66px);
-            pointer-events: none;
-
-            img {
-                @include res('width', 122px);
-                @include res('height', 124px);
+            & .text {
+                height: max-content;
+                overflow: auto;
+                opacity: 1;
             }
         }
 
-        &:nth-child(2) {
-            background: #9D3BFF;
-            z-index: 4;
-        }
+        .card {
+            @include res('width', 278.66px);
+            height: 100%;
+            @include res('border-radius', 24px);
+            @include res('margin-right', -40px);
+            transition: all 200ms;
+            @include res('padding-top', 36px);
+            @include res('padding-left', 42px);
+            @include res('padding-right', 50px);
+            @include res('padding-bottom', 54px);
+            position: relative;
 
-        &:nth-child(3) {
-            background: #503967;
-            z-index: 3;
+            &:hover {
+                @include res('width', 360px);
+
+                & .text {
+                    height: max-content;
+                    overflow: auto;
+                    opacity: 1;
+                }
+            }
+
+            .index {
+                font-family: Onest;
+                @include res('font-size', 48px);
+                @include res('line-height', 56px);
+                font-weight: 700;
+                text-align: left;
+                color: white;
+                @include res('margin-bottom', 16px);
+            }
+
+            .heading {
+                font-family: Onest;
+                @include res('font-size', 32px);
+                @include res('line-height', 36px);
+                font-weight: 600;
+                text-align: left;
+                color: white;
+                @include res('margin-bottom', 32px);
+            }
+
+            .text {
+                font-family: Onest;
+                @include res('width', 268px);
+                @include res('font-size', 17px);
+                @include res('line-height', 20px);
+                font-weight: 400;
+                text-align: left;
+                color: white;
+                height: 0;
+                overflow: hidden;
+                opacity: 0;
+                transition: opacity 200ms;
+            }
+
+            .btn {
+                position: absolute;
+                @include res('left', 42px);
+                @include res('bottom', 54px);
+                font-family: Onest;
+                @include res('font-size', 17px);
+                @include res('line-height', 22px);
+                font-weight: 500;
+                text-align: left;
+                box-shadow: 0px 4px 16px 0px #00000014;
+                @include res('padding', 16px);
+                @include res('padding-left', 32px);
+                @include res('padding-right', 32px);
+                @include res('border-radius', 44px);
+            }
+    
+            &:nth-child(1) {
+                background: #9D3BFF;
+                z-index: 4;
+
+                .btn {
+                    color: #9D3BFF;
+                }
+            }
+    
+            &:nth-child(2) {
+                background: #503967;
+                z-index: 3;
+            }
+
+            &:nth-child(3) {
+                background: #2E1D3E;
+                z-index: 2;
+            }
+
+            &:nth-child(4) {
+                background: #100817;
+                z-index: 1;
+            }
+        }
+    }
+
+    .leftCard {
+        @include res('width', 216px);
+        height: 100%;
+        background-color: white;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        @include res('padding-left', 24px);
+        @include res('margin-right', -66px);
+        pointer-events: none;
+        @include res('border-radius', 24px);
+
+        img {
+            @include res('width', 122px);
+            @include res('height', 124px);
         }
     }
 }
