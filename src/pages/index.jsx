@@ -14,14 +14,14 @@ const Home = () => {
 
   return (
     <>
-      <Header />
-      <Intro />
-      <About />
-      <Offer />
+      <Header popup={popup} setPopup={setPopup}/>
+      <Intro popup={popup} setPopup={setPopup}/>
+      <About popup={popup} setPopup={setPopup}/>
+      <Offer popup={popup} setPopup={setPopup}/>
       {/* <Direction /> */}
-      <Propose />
-      <Text />
-      <Footer />
+      <Propose popup={popup} setPopup={setPopup}/>
+      <Text popup={popup} setPopup={setPopup}/>
+      <Footer popup={popup} setPopup={setPopup}/>
     </>
   )
 }
