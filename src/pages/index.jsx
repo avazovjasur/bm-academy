@@ -5,7 +5,6 @@ import Direction from "@/components/Direction/Direction"
 import Header from "@/components/Header/Header"
 import Intro from "@/components/Intro/Intro"
 import Offer from "@/components/Offer/Offer"
-import Type from "@/components/Type/Type"
 import Propose from "@/components/Propose/Propose"
 import Text from "@/components/Text/Text"
 
