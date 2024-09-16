@@ -7,10 +7,12 @@ import Intro from "@/components/Intro/Intro"
 import Offer from "@/components/Offer/Offer"
 import Propose from "@/components/Propose/Propose"
 import Text from "@/components/Text/Text"
+import Popup from "@/components/Popup/Popup"
 
 
 const Home = () => {
   const [popup, setPopup] = useState(false)
+
 
   return (
     <>
@@ -21,6 +23,7 @@ const Home = () => {
       {/* <Direction /> */}
       <Propose popup={popup} setPopup={setPopup}/>
       <Text popup={popup} setPopup={setPopup}/>
+      <Popup popup={popup} setPopup={setPopup}/>
       <Footer popup={popup} setPopup={setPopup}/>
     </>
   )
