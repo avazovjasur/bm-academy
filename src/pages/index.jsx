@@ -1,5 +1,6 @@
 import About from "@/components/About/About"
 import Footer from "@/components/Footer/Footer"
+import Direction from "@/components/Direction/Direction"
 import Header from "@/components/Header/Header"
 import Intro from "@/components/Intro/Intro"
 import Offer from "@/components/Offer/Offer"
@@ -15,6 +16,7 @@ const Home = () => {
       <Offer />
       <Type />
       <Type />
+      <Direction />
       <Footer />
     </>
   )
