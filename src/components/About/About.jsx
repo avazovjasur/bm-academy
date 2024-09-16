@@ -2,7 +2,7 @@ import styles from './About.module.scss'
 
 const About = () => {
     return <section className={styles.about} id='about'>
-        <img src="cube.png" alt="" className={styles.cube} />
+        <img src="cube.png" alt="" className={styles.cube} draggable={false}/>
         <p className={styles.label}>О центре</p>
         <div className={styles.innerText}>
             <h3 className={styles.title}>Кто мы?</h3>

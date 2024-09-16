@@ -6,7 +6,7 @@ const Text = () => {
     return (
         <div className={styles.text}>
             <div className={styles.container}>
-                <img src="/text.png" alt="" />
+                <img src="/text.png" alt="" draggable={false} />
                 <p className={styles.title}>После обучения вы сможете работать востребованным специалистом в строительных компаниях.</p>
                 <a href="#!" className={styles.btn}>
                     Записаться на курс
