@@ -12,6 +12,11 @@
     background-repeat: no-repeat;
     background-size: cover;
 
+    @include media(392) {
+        min-height: 100vh;
+        background-position: center;
+    }
+
     .container {
         width: 100%;
         height: 100%;
@@ -21,6 +26,12 @@
         justify-content: flex-start;
         background: linear-gradient(180deg, rgba(0, 0, 0, 0.45) 0%, rgba(0, 0, 0, 0.81) 100%);
         @include res('padding-top', 216px);
+
+        @include media(392) {
+            @include resa('padding-top', 96px);
+            align-items: center;
+            justify-content: center;
+        }
     }
 
     .title {
@@ -31,6 +42,11 @@
         text-align: center;
         color: white;
         @include res('margin-bottom', 16px);
+
+        @include media(392) {
+            @include resa('font-size', 24px);
+            @include resa('margin-bottom', 16px);
+        }
     }
 
     .subtitle {
@@ -42,6 +58,13 @@
         text-align: center;
         color: white;
         @include res('margin-bottom', 16px);
+
+        @include media(392) {
+            @include resa('font-size', 54px);
+            line-height: 100%;
+            letter-spacing: -2%;
+            @include resa('margin-bottom', 16px);
+        }
     }
 
     .name {
@@ -52,6 +75,12 @@
         text-align: left;
         color: white;
         @include res('margin-bottom', 16px);
+
+        @include media(392) {
+            @include resa('font-size', 24px);
+            @include resa('line-height', 30.6px);
+            @include resa('margin-bottom', 16px);
+        }
     }
 
     .order {
@@ -72,9 +101,25 @@
         color: white;
         @include res('margin-bottom', 128px);
 
+        @include media(392) {
+            @include resa('padding', 12px);
+            @include resa('padding-left', 30px);
+            @include resa('padding-right', 30px);
+            @include resa('font-size', 16px);
+            @include resa('line-height', 20.4px);
+            @include resa('border-radius', 80px);
+            @include resa('gap', 10px);
+            margin-bottom: 0;
+        }
+
         svg {
             @include res('width', 32px);
             @include res('height', 32px);
+
+            @include media(392) {
+                @include resa('width', 32px);
+                @include resa('height', 32px);
+            }
         }
     }
 }
@@ -85,6 +130,10 @@
     justify-content: center;
     position: relative;
     @include res('margin-bottom', 16px);
+
+    @include media(392) {
+        display: none;
+    }
 
     .rect {
         position: relative;
@@ -108,6 +157,10 @@
     font-weight: 400;
     text-align: center;
     color: white;
+
+    @include media(392) {
+        display: none;
+    }
 }
 
 @keyframes anim {

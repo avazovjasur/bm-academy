@@ -6,7 +6,7 @@
 
 $baseValueUltraLarge: 1920px;
 $baseValueLarge: 1440px;
-$baseValueSmall: 375px;
+$baseValueSmall: 392px;
 
 @mixin resl($property, $value) {
     #{$property}: calc(($value / $baseValueUltraLarge) * 100vw);
