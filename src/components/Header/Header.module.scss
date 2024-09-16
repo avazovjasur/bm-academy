@@ -93,7 +93,7 @@
 
     .back {
         position: absolute;
-        @include resa('right', 22px);
+        @include resa('left', 22px);
         @include resa('top', 22px);
         @include resa('width', 42px);
         @include resa('height', 42px);
