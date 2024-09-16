@@ -311,4 +311,5 @@
     @include res('bottom', -200px);
     @include res('right', -100px);
     z-index: 1;
+    pointer-events: none;
 }
