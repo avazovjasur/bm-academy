@@ -1,8 +1,10 @@
 @import '@/styles/mixins.scss';
 .footer{
     color: #fff;
+    @include res('padding-top', 80px);
     @include res('padding-bottom', 80px);
     @include media(576){
+        @include resa('padding-top', 80px);
         @include resa('padding-bottom', 80px);
     }
 }

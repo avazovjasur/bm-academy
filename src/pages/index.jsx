@@ -5,6 +5,7 @@ import Header from "@/components/Header/Header"
 import Intro from "@/components/Intro/Intro"
 import Offer from "@/components/Offer/Offer"
 import Type from "@/components/Type/Type"
+import Propose from "@/components/Propose/Propose"
 
 
 const Home = () => {
@@ -14,9 +15,9 @@ const Home = () => {
       <Intro />
       <About />
       <Offer />
-      <Type />
-      <Type />
-      <Direction />
+      {/* <Type /> */}
+      {/* <Direction /> */}
+      <Propose />
       <Footer />
     </>
   )
