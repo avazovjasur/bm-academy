@@ -15,7 +15,7 @@
     }
 }
 .tag{
-    background: #9D3BFF;
+    background: #1143f8;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -115,7 +115,7 @@
         @include res('border-radius', 44px);
         @include res('font-size', 17px);
         color: #fff;
-        background: #9D3BFF;
+        background: #1143f8;
         @include media(576){
             @include resa('padding-top', 16px);
             @include resa('padding-bottom', 16px);

@@ -19,13 +19,13 @@ const Header = ({setPopup}) => {
         <div className={styles.left}>
           <button onClick={() => {setShowMenu(true)}} className={styles.burger}>
             <svg width="32" height="20" viewBox="0 0 32 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <rect width="32" height="4" rx="2" fill="#9D3BFF"/>
-              <rect y="8" width="32" height="4" rx="2" fill="#9D3BFF"/>
-              <rect y="16" width="32" height="4" rx="2" fill="#9D3BFF"/>
+              <rect width="32" height="4" rx="2" fill="#1143f8"/>
+              <rect y="8" width="32" height="4" rx="2" fill="#1143f8"/>
+              <rect y="16" width="32" height="4" rx="2" fill="#1143f8"/>
             </svg>
           </button>
-          <img src="mobile-logo.png" alt="" draggable="false" className={styles.mobileLogo} />
-          <img src="logo.png" alt="" draggable="false" className={styles.logo} />
+          <img src="new-logo.png" alt="" draggable="false" className={styles.mobileLogo} />
+          <img src="new-logo.png" alt="" draggable="false" className={styles.logo} />
           <nav className={styles.nav}>
               {/* <div className={styles.dropDown}>
                   <button type="button" className={styles.dropDownLabel}>
@@ -52,7 +52,7 @@ const Header = ({setPopup}) => {
           </nav>
         </div>
         <div className={styles.right}>
-          {/* <div className={styles.dropDown}>
+          <div className={styles.dropDown}>
               <button type="button" className={`${styles.dropDownLabel} ${styles.dropDownLang}`}>
                   RU 
                   <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -60,11 +60,11 @@ const Header = ({setPopup}) => {
                   </svg>
               </button>
               <div className={styles.dropDownInner}>
-                  <button type="button" className={styles.dropDownBtn}>1</button>
-                  <button type="button" className={styles.dropDownBtn}>2</button>
-                  <button type="button" className={styles.dropDownBtn}>3</button>
+                  <button type="button" className={`${styles.dropDownBtn} ${styles.active}`}>RU</button>
+                  <button type="button" className={styles.dropDownBtn}>UZ</button>
+                  <button type="button" className={styles.dropDownBtn}>EN</button>
               </div>
-          </div> */}
+          </div>
           <button type="button" className={styles.order} onClick={()=>setPopup(true)}>
               Заказать звонок
           </button>

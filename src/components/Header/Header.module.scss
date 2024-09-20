@@ -30,7 +30,7 @@
 }
 
 .logo {
-    @include res('width', 160px);
+    @include res('width', 60px);
 
     @include media(392) {
         display: none;
@@ -42,8 +42,8 @@
 
     @include media(392) {
         display: block;
-        @include resa('width', 42px);
-        @include resa('height', 42px);
+        @include resa('width', 60px);
+        // @include resa('height', 42px);
     }
 }
 
@@ -197,6 +197,10 @@
         &:hover {
             background-color: #e4e4e4;
         }
+
+        &.active {
+            background-color: #e4e4e4;
+        }
     }
 }
 
@@ -212,7 +216,7 @@
         @include res('padding-left', 16px);
         @include res('gap', 10px);
         @include res('border-radius', 46px);
-        background-color: #9D3BFF;
+        background-color: #1143f8;
         color: white;
         font-family: Onest;
         @include res('font-size', 17px);

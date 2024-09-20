@@ -3,7 +3,7 @@
 .intro {
     width: 100%;
     @include res('height', 816px);
-    background-color: green;
+    background-color: transparent;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -89,7 +89,7 @@
         align-items: center;
         justify-content: center;
         @include res('gap', 10px);
-        background-color: #9D3BFF;
+        background-color: #1143f8;
         @include res('border-radius', 80px);
         @include res('padding', 12px);
         @include res('padding-left', 30px);

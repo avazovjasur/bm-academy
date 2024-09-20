@@ -5,7 +5,7 @@
     @include res('padding-top', 120px);
     @include res('padding-left', 110px);
     @include res('padding-right', 110px);
-    @include res('padding-bottom', 143px);
+    @include res('padding-bottom', 43px);
     position: relative;
     overflow: hidden;
 
@@ -18,25 +18,6 @@
         @include res('padding-right', 110px);
         @include res('padding-bottom', 143px);
         overflow-y: visible;
-    }
-}
-
-.cube {
-    @include res('width', 700px);
-    @include res('height', 700px);
-    object-fit: cover;
-    position: absolute;
-    @include res('top', 30px);
-    @include res('right', 30px);
-    z-index: -1;
-    pointer-events: none;
-
-    @include media(392) {
-        @include resa('width', 400px);
-        @include resa('height', 400px);
-        @include resa('top', -100px);
-        @include resa('right', -200px);
-        z-index: 1;
     }
 }
 
@@ -54,32 +35,162 @@
     @include res('padding-left', 16px);
     @include res('gap', 10px);
     @include res('border-radius', 60px);
-    background-color: #9D3BFF;
+    background-color: #1143f8;
     text-transform: uppercase;
     @include res('margin-bottom', 20px);
 }
 
-.innerText {
-    @include res('width', 1220px);
-    @include res('padding-left', 38px);
-    @include res('padding-right', 38px);
+.cards {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    @include res('gap', 24px);
 
-    .title {
-        font-family: Onest;
-        @include res('font-size', 48px);
-        @include res('line-height', 54.72px);
-        font-weight: 700;
-        text-align: left;
-        color: #9D3BFF;
-        @include res('margin-bottom', 24px);
+    .midCards {
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        @include res('gap', 24px);
+
+        .card {
+            background-color: #202020;
+            display: flex;
+            align-items: flex-start;
+            justify-content: flex-start;
+            flex-direction: column;
+            position: relative;
+            @include res('width', 394px);
+            @include res('height', 394px);
+            @include res('border-radius', 24px);
+            @include res('padding', 28px);
+            overflow: hidden;
+
+            .icon {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border: solid white;
+                background-color: #1143f8;
+                border-radius: 50%; 
+                @include res('border-width', 1px);
+                @include res('width', 50px);
+                @include res('height', 50px);
+                @include res('margin-bottom', 24px);
+
+                svg {
+                    @include res('width', 30px);
+                    @include res('height', 30px);
+                }
+            }
+
+            &Title {
+                font-family: Onest;
+                font-weight: 500;
+                text-align: left;
+                color: #1143f8;
+                @include res('font-size', 17.61px);
+                @include res('line-height', 22.46px);
+                @include res('margin-bottom', 18px);
+            }
+
+            &Text {
+                font-family: Inter;
+                font-weight: 700;
+                letter-spacing: -0.025em;
+                text-align: left;
+                color: white;
+                @include res('font-size', 26.66px);
+                @include res('line-height', 30.66px);
+            }
+
+            .lastText {
+                position: absolute;
+                color: white;
+                font-family: Inter;
+                font-weight: 500;
+                text-align: left;
+                @include res('font-size', 16.44px);
+                @include res('line-height', 23.48px);
+                @include res('left', 28px);
+                @include res('bottom', 28px);
+            }
+
+            .bgImg {
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                @include res('width', 150px);
+                @include res('height', 200px);
+
+                svg {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+
+            &:last-child .bgImg {
+                @include res('width', 220px);
+                @include res('height', 270px);
+            }
+        }
     }
+    
+    .large {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-between;
+        background-color: #202020;
+        @include res('min-width', 384px);
+        height: 100%;
+        @include res('min-height', 812px);
+        @include res('max-height', 812px);
+        @include res('border-radius', 28px);
+        @include res('padding', 28px);
+        @include res('padding-top', 55px);
+        @include res('padding-bottom', 55px);
+        overflow: hidden;
 
-    .text {
-        font-family: Onest;
-        @include res('font-size', 32px);
-        @include res('line-height', 44.8px);
-        font-weight: 500;
-        text-align: left;
-        color: white;
+        .title {
+            color: #1143f8;
+            font-family: Onest;
+            font-weight: 700;
+            text-align: left;
+            @include res('font-size', 56.36px);
+            @include res('line-height', 64.25px);
+            @include res('margin-bottom', 28px);
+        }
+
+        .text {
+            color: white;
+            font-family: Onest;
+            font-weight: 500;
+            text-align: left;
+            @include res('font-size', 24.66px);
+            @include res('line-height', 34.52px);
+            @include res('margin-bottom', 37px);
+            @include res('width', 319px);
+
+            span {
+                width: 100%;
+                @include res('height', 34px);
+                display: block;
+            }
+        }
+
+        .logoContainer {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #1143f8;
+            @include res('height', 115px);
+            @include res('border-radius', 14px);
+        }
+
+        .logo {
+            @include res('width', 70px);
+        }
     }
 }

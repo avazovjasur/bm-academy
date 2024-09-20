@@ -19,8 +19,8 @@ const Home = () => {
       <Header popup={popup} setPopup={setPopup}/>
       <Intro popup={popup} setPopup={setPopup}/>
       <About popup={popup} setPopup={setPopup}/>
+      <Direction />
       <Offer popup={popup} setPopup={setPopup}/>
-      {/* <Direction /> */}
       <Propose popup={popup} setPopup={setPopup}/>
       <Text popup={popup} setPopup={setPopup}/>
       <Popup popup={popup} setPopup={setPopup}/>
