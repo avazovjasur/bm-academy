@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 
 import styles from "./Header.module.scss";
 
-const Header = () => {
+const Header = ({setPopup}) => {
   const [showMenu, setShowMenu] = useState(false)
 
   return (
@@ -65,7 +65,7 @@ const Header = () => {
                   <button type="button" className={styles.dropDownBtn}>3</button>
               </div>
           </div> */}
-          <button type="button" className={styles.order}>
+          <button type="button" className={styles.order} onClick={()=>setPopup(true)}>
               Заказать звонок
           </button>
         </div>
