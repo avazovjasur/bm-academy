@@ -17,7 +17,7 @@ const Home = () => {
       <About />
       <Offer />
       {/* <Type /> */}
-      {/* <Direction /> */}
+      <Direction />
       <Propose />
       <Text />
       <Footer />
