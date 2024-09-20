@@ -48,6 +48,26 @@
         justify-content: center;
         height: 100%;
 
+        .btnText {
+            display: none;
+        }
+
+        .btn {
+            padding: 0;
+            border-radius: 50%;
+        }
+
+        .btnSvg {
+            display: block;
+            @include res('width', 21px);
+            @include res('width', 21px);
+
+            svg {
+                width: 100%;
+                height: 100%;
+            }
+        }
+
         &:not(:hover) .card:nth-child(1) {
             @include res('width', 360px);
 
@@ -55,6 +75,19 @@
                 height: max-content;
                 overflow: auto;
                 opacity: 1;
+            }
+
+            .btnText {
+                display: inline;
+            }
+
+            .btnSvg {
+                display: none;
+            }
+
+            .btn {
+                @include res('padding-left', 32px, true);
+                @include res('padding-right', 32px, true);
             }
         }
 
@@ -77,6 +110,19 @@
                     height: max-content;
                     overflow: auto;
                     opacity: 1;
+                }
+
+                .btnText {
+                    display: inline;
+                }
+
+                .btn {
+                    @include res('padding-left', 32px, true);
+                    @include res('padding-right', 32px, true);
+                }
+
+                .btnSvg {
+                    display: none;
                 }
             }
 
@@ -116,18 +162,21 @@
 
             .btn {
                 position: absolute;
-                @include res('left', 42px);
-                @include res('bottom', 54px);
                 font-family: Onest;
-                @include res('font-size', 17px);
-                @include res('line-height', 22px);
                 font-weight: 500;
                 text-align: left;
                 box-shadow: 0px 4px 16px 0px #00000014;
-                @include res('padding', 16px);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                @include res('height', 50px);
                 @include res('padding-left', 32px);
                 @include res('padding-right', 32px);
                 @include res('border-radius', 44px);
+                @include res('font-size', 17px);
+                @include res('line-height', 22px);
+                @include res('left', 42px);
+                @include res('bottom', 24px);
             }
     
             &:nth-child(1) {
@@ -142,16 +191,46 @@
             &:nth-child(2) {
                 background: #0c32bd;
                 z-index: 3;
+                @include res('padding-left', 70px);
+
+                .text {
+                    @include res('width', 250px);
+                }
+
+                .btn {
+                    @include res('left', 62px);
+                    color: #0c32bd;
+                }
             }
 
             &:nth-child(3) {
                 background: #09299c;
                 z-index: 2;
+                @include res('padding-left', 70px);
+
+                .text {
+                    @include res('width', 250px);
+                }
+
+                .btn {
+                    @include res('left', 62px);
+                    color: #09299c;
+                }
             }
 
             &:nth-child(4) {
                 background: #071c66;
                 z-index: 1;
+                @include res('padding-left', 70px);
+
+                .text {
+                    @include res('width', 250px);
+                }
+
+                .btn {
+                    @include res('left', 62px);
+                    color: #071c66;
+                }
             }
         }
     }
