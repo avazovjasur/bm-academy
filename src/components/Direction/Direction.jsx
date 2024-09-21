@@ -12,9 +12,9 @@ const Direction = () => {
                 <div className={`${styles.card} ${styles.active}`}>
                     <p className={styles.index}>1</p>
                     <p className={styles.heading}>Education</p>
-                    <p className={styles.text}>Архитектура – это искусство и наука проектирования и строительства зданий и сооружений, создающих функциональную и эстетически привлекательную среду для жизни и деятельности человека.</p>
+                    <p className={styles.text}>Образование – это наука и искусство передачи знаний и навыков, способствующих развитию человека и общества, создавая интеллектуальную и культурную среду для личностного роста и профессионального успеха.</p>
                     <button type="button" className={styles.btn}>
-                        <span className={styles.btnText}>Записаться на курс</span>
+                        <span className={styles.btnText}>Посмотреть</span>
                         <span className={styles.btnSvg}>
                             <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M3.66585 10.9985H18.3325" stroke="#1143f8" stroke-linecap="round" stroke-linejoin="round"/>
@@ -26,9 +26,9 @@ const Direction = () => {
                 <div className={styles.card}>
                     <p className={styles.index}>2</p>
                     <p className={styles.heading}>Eating</p>
-                    <p className={styles.text}>Архитектура – это искусство и наука проектирования и строительства зданий и сооружений, создающих функциональную и эстетически привлекательную среду для жизни и деятельности человека.</p>
+                    <p className={styles.text}>Еда - франшиза готового бизнеса по продаже и приготовлению еды.</p>
                     <button type="button" className={styles.btn}>
-                        <span className={styles.btnText}>Записаться на курс</span>
+                        <span className={styles.btnText}>Посмотреть</span>
                         <span className={styles.btnSvg}>
                             <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M3.66585 10.9985H18.3325" stroke="#1143f8" stroke-linecap="round" stroke-linejoin="round"/>
@@ -40,9 +40,9 @@ const Direction = () => {
                 <div className={styles.card}>
                     <p className={styles.index}>3</p>
                     <p className={styles.heading}>Developed</p>
-                    <p className={styles.text}>Архитектура – это искусство и наука проектирования и строительства зданий и сооружений, создающих функциональную и эстетически привлекательную среду для жизни и деятельности человека.</p>
+                    <p className={styles.text}>Разработка - это путь к успеху, мы живем в мире цифровых наук. AB-Development занимается разработками сайтов, приложений и телеграм веб приложений</p>
                     <button type="button" className={styles.btn}>
-                        <span className={styles.btnText}>Записаться на курс</span>
+                        <span className={styles.btnText}>Посмотреть</span>
                         <span className={styles.btnSvg}>
                             <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M3.66585 10.9985H18.3325" stroke="#1143f8" stroke-linecap="round" stroke-linejoin="round"/>
@@ -53,10 +53,10 @@ const Direction = () => {
                 </div>
                 <div className={styles.card}>
                     <p className={styles.index}>4</p>
-                    <p className={styles.heading}>Game</p>
-                    <p className={styles.text}>Архитектура – это искусство и наука проектирования и строительства зданий и сооружений, создающих функциональную и эстетически привлекательную среду для жизни и деятельности человека.</p>
+                    <p className={styles.heading}>VR</p>
+                    <p className={styles.text}>VR - уникальный бизнес занимающийся разработкой реальных зданий в макете один в один.</p>
                     <button type="button" className={styles.btn}>
-                        <span className={styles.btnText}>Записаться на курс</span>
+                        <span className={styles.btnText}>Посмотреть</span>
                         <span className={styles.btnSvg}>
                             <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M3.66585 10.9985H18.3325" stroke="#1143f8" stroke-linecap="round" stroke-linejoin="round"/>
