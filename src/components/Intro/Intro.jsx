@@ -7,7 +7,7 @@ const Intro = () => {
             <p className={styles.subtitle}>
                 Territory of education
             </p>
-            <p className={styles.name}>Fortuna Consulting Center</p>
+            <p className={styles.name}>BM ACADEMY</p>
             <button type="button" className={styles.order}>
                 Записаться на курс
                 <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">

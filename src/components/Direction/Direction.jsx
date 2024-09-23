@@ -3,7 +3,7 @@ import styles from './Direction.module.scss'
 const Direction = () => {
     return <section className={styles.direction}>
         <p className={styles.label}>Направления</p>
-        <h2 className={styles.title}>Типы направлений</h2>
+        <h2 className={styles.title}>Виды бизнес-автоматизации</h2>
         <div className={styles.cards}>
             <div className={styles.leftCard}>
                 <img src="dots.png" alt="" draggable='false'/>
@@ -11,8 +11,8 @@ const Direction = () => {
             <div className={styles.activeBlocks}>
                 <div className={`${styles.card} ${styles.active}`}>
                     <p className={styles.index}>1</p>
-                    <p className={styles.heading}>Education</p>
-                    <p className={styles.text}>Образование – это наука и искусство передачи знаний и навыков, способствующих развитию человека и общества, создавая интеллектуальную и культурную среду для личностного роста и профессионального успеха.</p>
+                    <p className={styles.heading}>Строительство</p>
+                    <p className={styles.text}>Мы автоматизируем процессы строительства: управление проектами, учет материалов, финансовый контроль, документооборот и управление персоналом для повышения эффективности.</p>
                     <button type="button" className={styles.btn}>
                         <span className={styles.btnText}>Посмотреть</span>
                         <span className={styles.btnSvg}>
@@ -25,8 +25,8 @@ const Direction = () => {
                 </div>
                 <div className={styles.card}>
                     <p className={styles.index}>2</p>
-                    <p className={styles.heading}>Eating</p>
-                    <p className={styles.text}>Еда - франшиза готового бизнеса по продаже и приготовлению еды.</p>
+                    <p className={styles.heading}>IT</p>
+                    <p className={styles.text}>Мы автоматизируем IT: управление проектами, мониторинг систем, управление данными и ресурсами для повышения эффективности и безопасности.</p>
                     <button type="button" className={styles.btn}>
                         <span className={styles.btnText}>Посмотреть</span>
                         <span className={styles.btnSvg}>
@@ -39,8 +39,8 @@ const Direction = () => {
                 </div>
                 <div className={styles.card}>
                     <p className={styles.index}>3</p>
-                    <p className={styles.heading}>Developed</p>
-                    <p className={styles.text}>Разработка - это путь к успеху, мы живем в мире цифровых наук. AB-Development занимается разработками сайтов, приложений и телеграм веб приложений</p>
+                    <p className={styles.heading}>Продажи</p>
+                    <p className={styles.text}>Мы автоматизируем продажи на маркетплейсах: управление товарами, заказами, аналитикой и ценообразованием для увеличения прибыли и упрощения процессов.</p>
                     <button type="button" className={styles.btn}>
                         <span className={styles.btnText}>Посмотреть</span>
                         <span className={styles.btnSvg}>
@@ -53,8 +53,8 @@ const Direction = () => {
                 </div>
                 <div className={styles.card}>
                     <p className={styles.index}>4</p>
-                    <p className={styles.heading}>VR</p>
-                    <p className={styles.text}>VR - уникальный бизнес занимающийся разработкой реальных зданий в макете один в один.</p>
+                    <p className={styles.heading}>Процессинг</p>
+                    <p className={styles.text}>управление оборудованием, контроль качества, оптимизация выпуска продукции и мониторинг процессов для повышения производительности.</p>
                     <button type="button" className={styles.btn}>
                         <span className={styles.btnText}>Посмотреть</span>
                         <span className={styles.btnSvg}>

@@ -158,9 +158,8 @@
     @include res('margin-top', -360px);
     @include res('margin-right', 360px);
 
-    svg {
+    img {
         @include res('width', 261px);
-        @include res('height', 72px);
     }
 }
 
