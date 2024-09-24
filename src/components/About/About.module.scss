@@ -167,8 +167,8 @@
             font-family: Onest;
             font-weight: 500;
             text-align: left;
-            @include res('font-size', 24.66px);
-            @include res('line-height', 34.52px);
+            @include res('font-size', 24px);
+            @include res('line-height', 34px);
             @include res('margin-bottom', 37px);
             @include res('width', 319px);
 

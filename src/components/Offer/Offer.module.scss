@@ -87,7 +87,7 @@
     .drawingsContainer {
         width: 100%;
         height: 100%;
-        background: linear-gradient(180deg, #000000 -7.39%, rgba(0, 0, 0, 0.05) 100%);
+        background: linear-gradient(180deg, #000000 -7.39%, rgba(0, 0, 0, 0.3) 100%);
         position: relative;
         @include res('padding-top', 103px);
         @include res('padding-left', 33px);
@@ -127,6 +127,19 @@
             color: #1143f8;
         }
     }
+    h3{
+        font-family: Onest;
+        @include res('margin-top', 12px);
+        @include res('font-size', 16px);
+        @include res('line-height', 20px);
+        font-weight: 500;
+        text-align: left;
+        color: white;
+
+        span {
+            color: #1143f8;
+        }
+    }
 }
 
 .picture {
@@ -144,6 +157,44 @@
     .container {
         width: 100%;
         height: 100%;
+    }
+
+    .drawingsContainer {
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(180deg, #000000 -7.39%, rgba(0, 0, 0, 0.05) 100%);
+        position: relative;
+        @include res('padding-top', 30px);
+        @include res('padding-left', 33px);
+        @include res('padding-right', 40px);
+    }
+
+    p {
+        font-family: Onest;
+        @include res('font-size',28px);
+        @include res('line-height', 36px);
+        font-weight: 500;
+        letter-spacing: -0.025em;
+        text-align: left;
+        color: white;
+        text-transform: uppercase;
+
+        span {
+            color: #1143f8;
+        }
+    }
+    h3{
+        font-family: Onest;
+        @include res('margin-top', 12px);
+        @include res('font-size', 15px);
+        @include res('line-height', 19px);
+        font-weight: 500;
+        text-align: left;
+        color: white;
+
+        span {
+            color: #1143f8;
+        }
     }
 }
 
@@ -178,7 +229,7 @@
         color: white;
 
         &:first-child {
-            @include res('font-size', 44px);
+            @include res('font-size', 34px);
             @include res('line-height', 43.12px);
             font-weight: 600;
             @include res('letter-spacing', -0.4px);
@@ -232,66 +283,90 @@
     border: solid rgba(255, 255, 255, 0.3);
     @include res('border-width', 1px);
     overflow: hidden;
+    position: relative;
+    @include res('padding', 33px);
 
-    .heading {
-        @include res('width', 360px);
-        @include res('height', 180px);
-        background-color: #1143f8;
-        @include res('border-radius', 32px);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-        @include res('margin-bottom', 20px);
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        opacity: .5;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
 
-        p {
-            color: white;
+    p {
+        font-family: Onest;
+        position: relative;
+        color: white;
+        @include res('font-size', 32px);
+        @include res('line-height', 44px);
 
-            &:first-child {
-                @include res('font-size', 44px);
-                @include res('line-height', 43.12px);
-                @include res('letter-spacing', -0.4px);
-                font-weight: 600;
-                text-align: left;
-            }
-
-            &:last-child {
-                font-family: Onest;
-                @include res('font-size', 21px);
-                @include res('line-height', 25.2px);
-                font-weight: 400;
-                letter-spacing: -0.025em;
-                text-align: left;
-            }
+        span {
+            color: #1143f8;
         }
     }
 
-    .text {
-        @include res('padding-left', 20px);
-        @include res('padding-right', 20px);
-        font-family: Onest;
-        @include res('font-size', 17px);
-        @include res('line-height', 24.48px);
-        font-weight: 400;
-        text-align: left;
-        color: white;
-        @include res('margin-bottom', 16px);
-    }
+    // .heading {
+    //     @include res('width', 360px);
+    //     @include res('height', 180px);
+    //     background-color: #1143f8;
+    //     @include res('border-radius', 32px);
+    //     display: flex;
+    //     align-items: center;
+    //     justify-content: center;
+    //     flex-direction: column;
+    //     @include res('margin-bottom', 20px);
 
-    .btn {
-        @include res('margin-left', 20px);
-        background-color: white;
-        @include res('padding', 12px);
-        @include res('padding-left', 24px);
-        @include res('padding-right', 24px);
-        color: black;
-        @include res('border-radius', 48px);
-        font-family: Rubik;
-        @include res('font-size', 17px);
-        @include res('line-height', 24.48px);
-        font-weight: 400;
-        text-align: left;        
-    }
+    //     p {
+    //         color: white;
+
+    //         &:first-child {
+    //             @include res('font-size', 44px);
+    //             @include res('line-height', 43.12px);
+    //             @include res('letter-spacing', -0.4px);
+    //             font-weight: 600;
+    //             text-align: left;
+    //         }
+
+    //         &:last-child {
+    //             font-family: Onest;
+    //             @include res('font-size', 21px);
+    //             @include res('line-height', 25.2px);
+    //             font-weight: 400;
+    //             letter-spacing: -0.025em;
+    //             text-align: left;
+    //         }
+    //     }
+    // }
+
+    // .text {
+    //     @include res('padding-left', 20px);
+    //     @include res('padding-right', 20px);
+    //     font-family: Onest;
+    //     @include res('font-size', 17px);
+    //     @include res('line-height', 24.48px);
+    //     font-weight: 400;
+    //     text-align: left;
+    //     color: white;
+    //     @include res('margin-bottom', 16px);
+    // }
+
+    // .btn {
+    //     @include res('margin-left', 20px);
+    //     background-color: white;
+    //     @include res('padding', 12px);
+    //     @include res('padding-left', 24px);
+    //     @include res('padding-right', 24px);
+    //     color: black;
+    //     @include res('border-radius', 48px);
+    //     font-family: Rubik;
+    //     @include res('font-size', 17px);
+    //     @include res('line-height', 24.48px);
+    //     font-weight: 400;
+    //     text-align: left;        
+    // }
 }
 
 .mainText {
@@ -313,7 +388,7 @@
     @include res('width', 761px);
     @include res('height', 847px);
     position: absolute;
-    @include res('bottom', -250px);
+    @include res('bottom', -270px);
     @include res('right', -120px);
     z-index: 1;
     pointer-events: none;
