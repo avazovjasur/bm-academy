@@ -13,13 +13,12 @@ import Popup from "@/components/Popup/Popup"
 const Home = () => {
   const [popup, setPopup] = useState(false)
 
-
   return (
     <>
       <Header popup={popup} setPopup={setPopup}/>
       <Intro popup={popup} setPopup={setPopup}/>
       <About popup={popup} setPopup={setPopup}/>
-      <Direction />
+      <Direction popup={popup} setPopup={setPopup}/>
       <Offer popup={popup} setPopup={setPopup}/>
       <Propose popup={popup} setPopup={setPopup}/>
       <Text popup={popup} setPopup={setPopup}/>

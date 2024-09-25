@@ -2,7 +2,7 @@ import React from 'react'
 
 import styles from './Propose.module.scss'
 
-const Propose = () => {
+const Propose = ({setPopup}) => {
     return (
         <div className={styles.propose}>
             <div className={styles.container}>
@@ -20,12 +20,12 @@ const Propose = () => {
                     <div className={styles.col}>
                         <div className={styles.item}>
                             <p className={styles.itemTitle}>Партнерство</p>
-                            <a href="#!" className={styles.itemBtn}>Детали</a>
+                            <a href="#!" onClick={() => setPopup(true)} className={styles.itemBtn}>Детали</a>
                             <img src="/propose-3.png" alt="" draggable={false} />
                         </div>
                         <div className={styles.item}>
                             <p className={styles.itemTitle}>Маштаб</p>
-                            <a href="#!" className={styles.itemBtn}>Детали</a>
+                            <a href="#!" onClick={() => setPopup(true)} className={styles.itemBtn}>Детали</a>
                             <img src="/propose-4.png" alt="" draggable={false} />
                         </div>
                     </div>

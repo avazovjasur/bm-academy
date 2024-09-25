@@ -1,9 +1,9 @@
 import styles from './Direction.module.scss'
 
 const Direction = () => {
-    return <section className={styles.direction}>
+    return <section className={styles.direction} id='direction'>
         <p className={styles.label}>Направления</p>
-        <h2 className={styles.title}>Виды бизнес-автоматизации</h2>
+        <h2 className={styles.title}><span>Виды</span> бизнес-автоматизации</h2>
         <div className={styles.cards}>
             <div className={styles.leftCard}>
                 <img src="dots.png" alt="" draggable='false'/>

@@ -2,13 +2,13 @@ import React from 'react'
 
 import styles from './Text.module.scss'
 
-const Text = () => {
+const Text = ({setPopup}) => {
     return (
         <div className={styles.text}>
             <div className={styles.container}>
                 <img src="/text.png" alt="" draggable={false} />
                 <p className={styles.title}>Автоматизация ускоряет процессы, снижает ошибки, повышает прибыль.</p>
-                <a href="#!" className={styles.btn}>
+                <a href="#!" onClick={() => setPopup(true)} className={styles.btn}>
                     Оставить заявку
                     <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M16 28C22.6274 28 28 22.6274 28 16C28 9.37258 22.6274 4 16 4C9.37258 4 4 9.37258 4 16C4 22.6274 9.37258 28 16 28Z" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>

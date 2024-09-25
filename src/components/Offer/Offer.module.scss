@@ -2,22 +2,36 @@
 
 .offer {
     width: 100%;
+    overflow: hidden;
     @include res('padding-top', 50px);
     @include res('padding-bottom', 100px);
-    overflow: hidden;
+
+    @include media(576){
+        @include resa('padding-top', 50px);
+        @include resa('padding-bottom', 100px);
+    }
 }
 
 .container {
     display: flex;
     margin: auto;
+    position: relative;
+    background-color: #202020;
     @include res('width', 1240px);
     @include res('padding-top', 53px);
     @include res('padding-left', 56px);
     @include res('padding-right', 56px);
     @include res('padding-bottom', 116px);
     @include res('border-radius', 40px);
-    position: relative;
-    background-color: #202020;
+
+    @include media(576){
+        width: 100%;
+        @include resa('padding-top', 53px);
+        @include resa('padding-left', 20px);
+        @include resa('padding-right', 20px);
+        @include resa('padding-bottom', 116px);
+        @include resa('border-radius', 40px);
+    }
 }
 
 .cards {
@@ -29,25 +43,40 @@
 }
 
 .weOffer {
-    @include res('width', 744px);
-    @include res('height', 360px);
     background-color: #1143f8;
-    @include res('border-radius', 32px);
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: space-between;
+    @include res('width', 744px);
+    @include res('height', 360px);
     @include res('padding', 32px);
+    @include res('border-radius', 32px);
     @include res('margin-right', 24px);
 
+    @include media(576){
+        width: 100%;
+        margin-right: 0;
+        @include resa('height', 360px);
+        @include resa('padding', 32px);
+        @include resa('border-radius', 32px);
+        @include resa('margin-bottom', 24px);
+    }
+
     .text {
-        @include res('width', 419px);
         color: white;
-        @include res('font-size', 48px);
-        @include res('line-height', 61.25px);
         font-weight: 700;
         text-align: left;
         cursor: default;
+        @include res('width', 419px);
+        @include res('font-size', 48px);
+        @include res('line-height', 61.25px);
+
+        @include media(576){
+            @include resa('width', 419px);
+            @include resa('font-size', 48px);
+            @include resa('line-height', 61.25px);
+        }
     }
 
     .offers {
@@ -56,33 +85,68 @@
         justify-content: center;
         @include res('gap', 8px);
 
+        @include media(576){
+            @include resa('gap', 8px);
+            align-items: flex-start;
+            justify-content: flex-start;
+            flex-wrap: wrap;
+        }
+
         p {
             display: block;
             box-shadow: 0px 4px 16px 0px #0000001F;
-            @include res('border-radius', 16px);
-            @include res('padding', 16px);
             border: solid white;
-            @include res('border-width', 1px);
             background: linear-gradient(103.7deg, rgba(255, 255, 255, 0.37) -7.84%, rgba(255, 255, 255, 0.13) 116.67%);
             font-family: Rubik;
-            @include res('font-size', 21px);
-            @include res('line-height', 25.2px);
             font-weight: 400;
             text-align: left;
             color: white;
             cursor: default;
+            @include res('border-radius', 16px);
+            @include res('padding', 16px);
+            @include res('font-size', 21px);
+            @include res('line-height', 25.2px);
+            @include res('border-width', 1px);
+
+            @include media(576){
+                @include resa('border-radius', 16px);
+                @include resa('padding', 16px);
+                @include resa('font-size', 21px);
+                @include resa('line-height', 25.2px);
+                @include resa('border-width', 1px);
+                text-align: center;
+
+                &:nth-child(1) {
+                    width: 100%;
+                }
+
+                &:nth-child(2) {
+                    @include resa('width', 120px);
+                }
+
+                &:nth-child(3) {
+                    @include resa('width', 160px);
+                }
+            }
         }
     }
 }
 
 .drawings {
-    @include res('width', 360px);
-    @include res('height', 744px);
     background-image: url(../../../public/drawings.png);
     background-repeat: no-repeat;
     background-size: cover;
-    @include res('border-radius', 32px);
     overflow: hidden;
+    @include res('width', 360px);
+    @include res('height', 744px);
+    @include res('border-radius', 32px);
+
+    @include media(576) {
+        @include resa('width', 360px);
+        @include resa('height', 744px);
+        @include resa('border-radius', 32px);
+        @include resa('margin-bottom', 24px);
+    }
 
     .drawingsContainer {
         width: 100%;
@@ -92,49 +156,79 @@
         @include res('padding-top', 103px);
         @include res('padding-left', 33px);
         @include res('padding-right', 40px);
+
+        @include media(576){
+            @include resa('padding-top', 103px);
+            @include resa('padding-left', 33px);
+            @include resa('padding-right', 40px);
+        }
     }
 
     .link {
         border-radius: 50%;
         background-color: white;
-        @include res('width', 68px);
-        @include res('height', 68px);
         display: flex;
         align-items: center;
         justify-content: center;
         position: absolute;
+        cursor: pointer;
+        @include res('width', 68px);
+        @include res('height', 68px);
         @include res('top', 24px);
         @include res('right', 24px);
-        cursor: pointer;
+
+        @include media(576){
+            @include resa('width', 68px);
+            @include resa('height', 68px);
+            @include resa('top', 24px);
+            @include resa('right', 24px);
+        }
 
         svg {
             @include res('width', 44px);
             @include res('height', 44px);
+
+            @include media(576){
+                @include resa('width', 44px);
+                @include resa('height', 44px);
+            }
         }
     }
 
     p {
         font-family: Onest;
-        @include res('font-size', 44px);
-        @include res('line-height', 52.8px);
         font-weight: 300;
         letter-spacing: -0.025em;
         text-align: left;
         color: white;
         text-transform: uppercase;
+        @include res('font-size', 44px);
+        @include res('line-height', 52.8px);
+
+        @include media(576){
+            @include resa('font-size', 44px);
+            @include resa('line-height', 52.8px);
+        }
 
         span {
             color: #1143f8;
         }
     }
-    h3{
+
+    h3 {
         font-family: Onest;
-        @include res('margin-top', 12px);
-        @include res('font-size', 16px);
-        @include res('line-height', 20px);
         font-weight: 500;
         text-align: left;
         color: white;
+        @include res('margin-top', 12px);
+        @include res('font-size', 16px);
+        @include res('line-height', 20px);
+
+        @include media(576){
+            @include resa('margin-top', 12px);
+            @include resa('font-size', 16px);
+            @include resa('line-height', 20px);
+        }
 
         span {
             color: #1143f8;
@@ -143,16 +237,25 @@
 }
 
 .picture {
-    @include res('width', 360px);
-    @include res('height', 540px);
     background-image: url(../../../public/picture.png);
     background-repeat: no-repeat;
     background-size: cover;
-    @include res('border-radius', 32px);
     overflow: hidden;
     @include res('margin-top', -360px);
     @include res('margin-right', 24px);
     @include res('margin-bottom', 24px);
+    @include res('width', 360px);
+    @include res('height', 540px);
+    @include res('border-radius', 32px);
+
+    @include media(576){
+        margin-top: 0;
+        margin-right: 0;
+        @include resa('margin-bottom', 24px);
+        @include resa('width', 360px);
+        @include resa('height', 540px);
+        @include resa('border-radius', 32px);
+    }
 
     .container {
         width: 100%;
@@ -167,17 +270,28 @@
         @include res('padding-top', 30px);
         @include res('padding-left', 33px);
         @include res('padding-right', 40px);
+
+        @include media(576){
+            @include resa('padding-top', 30px);
+            @include resa('padding-left', 33px);
+            @include resa('padding-right', 40px);
+        }
     }
 
     p {
         font-family: Onest;
-        @include res('font-size',28px);
-        @include res('line-height', 36px);
         font-weight: 500;
         letter-spacing: -0.025em;
         text-align: left;
         color: white;
         text-transform: uppercase;
+        @include res('font-size',28px);
+        @include res('line-height', 36px);
+
+        @include media(576){
+            @include resa('font-size',28px);
+            @include resa('line-height', 36px);
+        }
 
         span {
             color: #1143f8;
@@ -185,12 +299,18 @@
     }
     h3{
         font-family: Onest;
-        @include res('margin-top', 12px);
-        @include res('font-size', 15px);
-        @include res('line-height', 19px);
         font-weight: 500;
         text-align: left;
         color: white;
+        @include res('margin-top', 12px);
+        @include res('font-size', 15px);
+        @include res('line-height', 19px);
+
+        @include media(576){
+            @include resa('margin-top', 12px);
+            @include resa('font-size', 15px);
+            @include resa('line-height', 19px);
+        }
 
         span {
             color: #1143f8;
@@ -199,92 +319,147 @@
 }
 
 .logo {
-    @include res('width', 360px);
-    @include res('height', 360px);
-    @include res('border-radius', 32px);
     display: flex;
     align-items: center;
     justify-content: center;
     background-color: #1143f8;
     @include res('margin-top', -360px);
     @include res('margin-right', 360px);
+    @include res('width', 360px);
+    @include res('height', 360px);
+    @include res('border-radius', 32px);
+
+    @include media(576){
+        margin: 0;
+        @include resa('width', 360px);
+        @include resa('height', 360px);
+        @include resa('border-radius', 32px);
+        @include resa('margin-bottom', 24px);
+    }
 
     img {
         @include res('width', 261px);
+
+        @include media(576){
+            @include resa('width', 261px);
+        }
     }
 }
 
 .date {
-    @include res('width', 360px);
-    @include res('height', 180px);
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     background-color: #1143f8;
+    @include res('width', 360px);
+    @include res('height', 180px);
     @include res('border-radius', 32px);
     @include res('margin-right', 24px);
+
+    @include media(576) {
+        margin: 0;
+        @include resa('width', 360px);
+        @include resa('height', 180px);
+        @include resa('border-radius', 32px);
+        @include resa('margin-bottom', 24px);
+    }
     
     p {
         color: white;
 
         &:first-child {
-            @include res('font-size', 34px);
-            @include res('line-height', 43.12px);
             font-weight: 600;
-            @include res('letter-spacing', -0.4px);
             text-align: left;
             text-transform: uppercase;
+            @include res('font-size', 34px);
+            @include res('line-height', 43.12px);
+            @include res('letter-spacing', -0.4px);
+
+            @include media(576){
+                @include resa('font-size', 34px);
+                @include resa('line-height', 43.12px);
+                @include resa('letter-spacing', -0.4px);
+            }
         }
 
         &:last-child {
             font-family: Onest;
-            @include res('font-size', 21px);
-            @include res('line-height', 25.2px);
             font-weight: 400;
             letter-spacing: -0.025em;
             text-align: left;
+            @include res('font-size', 21px);
+            @include res('line-height', 25.2px);
+
+            @include media(576){
+                @include resa('font-size', 21px);
+                @include resa('line-height', 25.2px);
+            }
         }
     }
 }
 
 .stats {
-    @include res('width', 360px);
-    @include res('height', 360px);
     display: flex;
     align-items: center;
     justify-content: center;
-    @include res('margin-top', -180px);
     background-color: #fff;
     background-color: #001523;
-    @include res('border-radius', 32px);
     border: solid rgba(255, 255, 255, 0.3);
     @include res('border-width', 1px);
     @include res('margin-right', 24px);
+    @include res('width', 360px);
+    @include res('height', 360px);
+    @include res('border-radius', 32px);
+    @include res('margin-top', -180px);
+
+    @include media(576){
+        margin: 0;
+        @include resa('border-width', 1px);
+        @include resa('width', 360px);
+        @include resa('height', 360px);
+        @include resa('border-radius', 32px);
+        @include resa('margin-bottom', 24px);
+    }
 
     &Img {
+        object-fit: cover;
         @include res('width', 278px);
         @include res('height', 308px);
-        object-fit: cover;
+
+        @include media(576){
+            @include resa('width', 278px);
+            @include resa('height', 308px);
+        }
     }
 }
 
 .duration {
-    @include res('width', 360px);
-    @include res('height', 360px);
     display: flex;
     align-items: flex-start;
     justify-content: flex-start;
     flex-direction: column;
-    @include res('margin-top', -180px);
     background-color: #fff;
     background-color: #001523;
-    @include res('border-radius', 32px);
     border: solid rgba(255, 255, 255, 0.3);
-    @include res('border-width', 1px);
     overflow: hidden;
     position: relative;
     @include res('padding', 33px);
+    @include res('width', 360px);
+    @include res('height', 360px);
+    @include res('border-width', 1px);
+    @include res('border-radius', 32px);
+    @include res('margin-top', -180px);
+
+    @include media(576){
+        margin: 0;
+        @include resa('padding', 33px);
+        @include resa('width', 360px);
+        @include resa('height', 360px);
+        @include resa('border-width', 1px);
+        @include resa('border-radius', 32px);
+        @include resa('margin-bottom', 24px);
+    }
 
     img {
         width: 100%;
@@ -302,6 +477,11 @@
         color: white;
         @include res('font-size', 32px);
         @include res('line-height', 44px);
+
+        @include media(576){
+            @include resa('font-size', 32px);
+            @include resa('line-height', 44px);
+        }
 
         span {
             color: #1143f8;
@@ -372,12 +552,19 @@
 .mainText {
     color: white;
     font-family: Onest;
-    @include res('font-size', 56px);
-    @include res('line-height', 80.64px);
     font-weight: 600;
     text-align: left;
+    @include res('font-size', 56px);
+    @include res('line-height', 80.64px);
     @include res('margin-top', 56px);
     @include res('width', 903px);
+
+    @include media(576){
+        margin: 0;
+        @include resa('font-size', 30px);
+        @include resa('line-height', 40px);
+        @include resa('width', 903px);
+    }
 
     span {
         color: #1143f8;
@@ -385,11 +572,16 @@
 }
 
 .bgImg {
-    @include res('width', 761px);
-    @include res('height', 847px);
     position: absolute;
-    @include res('bottom', -270px);
-    @include res('right', -120px);
     z-index: 1;
     pointer-events: none;
+    @include res('width', 761px);
+    @include res('height', 847px);
+    @include res('bottom', -270px);
+    @include res('right', -120px);
+
+    @include media(576){
+        @include resa('bottom', -80px);
+        @include resa('right', -20px);
+    }
 }

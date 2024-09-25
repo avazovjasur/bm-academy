@@ -3,17 +3,17 @@
 .header {
     background-color: white;
     width: 100%;
-    @include res('padding-left', 113px);
-    @include res('padding-right', 113px);
-    @include res('height', 96px);
     position: fixed;
     top: 0;
     display: flex;
     align-items: center;
     justify-content: space-between;
     z-index: 100;
+    @include res('padding-left', 113px);
+    @include res('padding-right', 113px);
+    @include res('height', 96px);
 
-    @include media(392) {
+    @include media(576){
         @include resa('height', 68px);
     }
 }
@@ -24,7 +24,7 @@
     justify-content: space-between;
     @include res('gap', 40px);
 
-    @include media(392) {
+    @include media(576){
         @include resa('gap', 49px);
     }
 }
@@ -32,7 +32,7 @@
 .logo {
     @include res('width', 60px);
 
-    @include media(392) {
+    @include media(576){
         display: none;
     }
 }
@@ -40,9 +40,9 @@
 .mobileLogo {
     display: none;
 
-    @include media(392) {
+    @include media(576){
         display: block;
-        @include resa('width', 60px);
+        @include resa('width', 40px);
         // @include resa('height', 42px);
     }
 }
@@ -50,7 +50,7 @@
 .burger {
     display: none;
 
-    @include media(392) {
+    @include media(576) {
         display: flex;
         @include resa('width', 42px);
         @include resa('height', 42px);
@@ -117,7 +117,7 @@
     justify-content: center;
     @include res('gap', 32px);
     
-    @include media(392) {
+    @include media(576) {
         display: none;
     }
 
@@ -131,6 +131,10 @@
 
 .dropDown {
     position: relative;
+
+    @include media(576){
+        display: none;
+    }
 
     &Lang {
         border: solid #E8ECF5;
@@ -223,7 +227,7 @@
         @include res('line-height', 20px);
         font-weight: 400;
 
-        @include media(392) {
+        @include media(576) {
             @include resa('padding', 10px);
             @include resa('padding-right', 16px);
             @include resa('padding-left', 16px);

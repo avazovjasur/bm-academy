@@ -9,14 +9,14 @@
     position: relative;
     overflow: hidden;
 
-    @include media(392) {
+    @include media(576) {
         background-color: #202020;
-        @include resa('border-radius', 40px);
-        @include resa('margin-top', -40px);
-        @include resa('padding-top', 211px);
-        @include res('padding-left', 110px);
-        @include res('padding-right', 110px);
-        @include res('padding-bottom', 143px);
+        @include resa('border-bottom-left-radius', 40px);
+        @include resa('border-bottom-right-radius', 40px);
+        @include resa('padding-top', 40px);
+        @include resa('padding-left', 20px);
+        @include resa('padding-right', 20px);
+        @include resa('padding-bottom', 40px);
         overflow-y: visible;
     }
 }
@@ -25,19 +25,30 @@
     position: relative;
     width: max-content;
     font-family: Onest;
-    @include res('font-size', 21px);
-    @include res('line-height', 24px);
     font-weight: 500;
     text-align: left;
     color: white;
+    background-color: #1143f8;
+    text-transform: uppercase;
+    @include res('font-size', 21px);
+    @include res('line-height', 24px);
     @include res('padding', 12px);
     @include res('padding-right', 16px);
     @include res('padding-left', 16px);
     @include res('gap', 10px);
     @include res('border-radius', 60px);
-    background-color: #1143f8;
-    text-transform: uppercase;
     @include res('margin-bottom', 20px);
+
+    @include media(576){
+        @include resa('font-size', 21px);
+        @include resa('line-height', 24px);
+        @include resa('padding', 12px);
+        @include resa('padding-right', 16px);
+        @include resa('padding-left', 16px);
+        @include resa('gap', 10px);
+        @include resa('border-radius', 60px);
+        @include resa('margin-bottom', 20px);
+    }
 }
 
 .cards {
@@ -46,12 +57,23 @@
     justify-content: flex-start;
     @include res('gap', 24px);
 
+    @include media(576){
+        @include resa('gap', 24px);
+        flex-direction: column;
+    }
+
     .midCards {
         display: flex;
         align-items: flex-start;
         justify-content: flex-start;
         flex-wrap: wrap;
         @include res('gap', 24px);
+
+        @include media(576){
+            width: 100%;
+            @include resa('gap', 24px);
+            flex-direction: column;
+        }
 
         .card {
             background-color: #202020;
@@ -60,11 +82,21 @@
             justify-content: flex-start;
             flex-direction: column;
             position: relative;
+            overflow: hidden;
             @include res('width', 394px);
             @include res('height', 394px);
             @include res('border-radius', 24px);
             @include res('padding', 28px);
-            overflow: hidden;
+
+            @include media(576){
+                width: 100%;
+                height: max-content;
+                border-radius: 0;
+                padding: 0;
+                background-color: black;
+                @include resa('padding', 28px);
+                @include resa('border-radius', 34px);
+            }
 
             .icon {
                 display: flex;
@@ -78,9 +110,21 @@
                 @include res('height', 50px);
                 @include res('margin-bottom', 24px);
 
+                @include media(576){
+                    @include resa('border-width', 1px);
+                    @include resa('width', 50px);
+                    @include resa('height', 50px);
+                    @include resa('margin-bottom', 24px);
+                }
+
                 svg {
                     @include res('width', 30px);
                     @include res('height', 30px);
+
+                    @include media(576){
+                        @include resa('width', 30px);
+                        @include resa('height', 30px);
+                    }
                 }
             }
 
@@ -92,6 +136,12 @@
                 @include res('font-size', 17.61px);
                 @include res('line-height', 22.46px);
                 @include res('margin-bottom', 18px);
+
+                @include media(576){
+                    @include resa('font-size', 17.61px);
+                    @include resa('line-height', 22.46px);
+                    @include resa('margin-bottom', 18px);
+                }
             }
 
             &Text {
@@ -102,6 +152,12 @@
                 color: white;
                 @include res('font-size', 26.66px);
                 @include res('line-height', 30.66px);
+
+                @include media(576){
+                    @include resa('font-size', 26.66px);
+                    @include resa('line-height', 30.66px);
+                    z-index: 1;
+                }
             }
 
             .lastText {
@@ -114,6 +170,15 @@
                 @include res('line-height', 23.48px);
                 @include res('left', 28px);
                 @include res('bottom', 28px);
+
+                @include media(576){
+                    position: relative;
+                    left: 0;
+                    bottom: 0;
+                    @include resa('font-size', 16.44px);
+                    @include resa('line-height', 23.48px);
+                    @include resa('margin-top', 20px);
+                }
             }
 
             .bgImg {
@@ -122,6 +187,12 @@
                 right: 0;
                 @include res('width', 150px);
                 @include res('height', 200px);
+
+                @include media(576){
+                    @include resa('width', 150px);
+                    @include resa('height', 200px);
+                    z-index: 0;
+                }
 
                 svg {
                     width: 100%;
@@ -132,6 +203,11 @@
             &:last-child .bgImg {
                 @include res('width', 220px);
                 @include res('height', 270px);
+
+                @include media(576){
+                    @include resa('width', 220px);
+                    @include resa('height', 270px);
+                }
             }
         }
     }
@@ -142,15 +218,25 @@
         align-items: flex-start;
         justify-content: space-between;
         background-color: #202020;
-        @include res('min-width', 384px);
+        overflow: hidden;
         height: 100%;
+        @include res('min-width', 384px);
         @include res('min-height', 812px);
         @include res('max-height', 812px);
         @include res('border-radius', 28px);
         @include res('padding', 28px);
         @include res('padding-top', 55px);
         @include res('padding-bottom', 55px);
-        overflow: hidden;
+
+        @include media(576){
+            width: 100%;
+            min-width: 0;
+            min-height: 0;
+            max-height: auto;
+            padding: 0;
+            border-radius: 0;
+            @include resa('margin-bottom', 55px);
+        }
 
         .title {
             color: #1143f8;
@@ -160,6 +246,12 @@
             @include res('font-size', 56.36px);
             @include res('line-height', 64.25px);
             @include res('margin-bottom', 28px);
+
+            @include media(576){
+                @include resa('font-size', 56.36px);
+                @include resa('line-height', 64.25px);
+                @include resa('margin-bottom', 28px);
+            }
         }
 
         .text {
@@ -171,6 +263,13 @@
             @include res('line-height', 34px);
             @include res('margin-bottom', 37px);
             @include res('width', 319px);
+
+            @include media(576){
+                @include resa('font-size', 24px);
+                @include resa('line-height', 34px);
+                @include resa('margin-bottom', 37px);
+                @include resa('width', 319px);
+            }
 
             span {
                 width: 100%;

@@ -6,14 +6,14 @@ const Header = ({setPopup}) => {
   const [showMenu, setShowMenu] = useState(false)
 
   return (
-    <>    
+    <>
       <div className={`${styles.menu} ${showMenu ? styles.active : ''}`}>
         <button type="button" className={styles.back} onClick={() => {setShowMenu(false)}}>
           <img src="back.svg" alt="" />
         </button>
         <a href="#about" onClick={() => {setShowMenu(false)}} className={styles.menuBtn}>О нас</a>
-        <a href="#" onClick={() => {setShowMenu(false)}} className={styles.menuBtn}>Отзывы</a>
-        <a href="#" onClick={() => {setShowMenu(false)}} className={styles.menuBtn}>Контакты</a>
+        <a href="#direction" onClick={() => {setShowMenu(false)}} className={styles.menuBtn}>Направления</a>
+        <a href="#footer" onClick={() => {setShowMenu(false)}} className={styles.menuBtn}>Контакты</a>
       </div>
       <header className={styles.header}>
         <div className={styles.left}>
@@ -40,13 +40,13 @@ const Header = ({setPopup}) => {
                       <button type="button" className={styles.dropDownBtn}>3</button>
                   </div>
               </div> */}
-            <a className={styles.btn} href="#">
+            <a className={styles.btn} href="#about">
               О нас
             </a>
-            <a className={styles.btn} href="#">
-              Отзывы
+            <a className={styles.btn} href="#direction">
+              Направления
             </a>
-            <a className={styles.btn} href="#">
+            <a className={styles.btn} href="#footer">
               Контакты
             </a>
           </nav>
