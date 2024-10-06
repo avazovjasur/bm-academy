@@ -1,4 +1,5 @@
-import React, { useState } from "react"
+import React, { useEffect, useState } from "react"
+import { useRouter } from "next/router"
 import About from "@/components/About/About"
 import Footer from "@/components/Footer/Footer"
 import Direction from "@/components/Direction/Direction"
@@ -11,7 +12,12 @@ import Popup from "@/components/Popup/Popup"
 
 
 const Home = () => {
+  const router = useRouter()
   const [popup, setPopup] = useState(false)
+
+  useEffect(() => {
+    router.push(router.pathname, router.asPath, { locale: 'ru' });
+  }, [])
 
   return (
     <>

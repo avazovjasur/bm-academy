@@ -1,8 +1,16 @@
-import React from 'react'
+import { useRouter } from 'next/router';
 
-import styles from './Footer.module.scss'
+import en from '@/locales/en';
+import uz from '@/locales/uz';
+import ru from '@/locales/ru';
+
+import styles from './Footer.module.scss';
 
 const Footer = () => {
+    const router = useRouter();
+    const { locale } = router;
+    const t = locale === 'uz' ? uz : locale === 'en' ? en : ru;
+
     return (
         <div className={styles.footer} id='footer'>
             <div className={styles.container}>
@@ -11,24 +19,24 @@ const Footer = () => {
                         <div className={styles.logo}>
                             <img src="new-logo.png" alt="" />
                         </div>
-                        <p className={styles.p}>Вся наша продукция прошла обязательную сертификацию и соответствует самым высоким стандартам</p>
+                        <p className={styles.p}>{t['highest_standards']}</p>
                     </div>
                     <div className={styles.col}>
-                        <p className={styles.title}>Адрес</p>
-                        <p className={styles.link}>Г Ташкент, Чилонзор район, квартал 3, 33 дом, 3</p>
+                        <p className={styles.title}>{t['address']}</p>
+                        <p className={styles.link}>{t['address_text']}</p>
                     </div>
                     <div className={styles.col}>
-                        <p className={styles.title}>Контакты</p>
+                        <p className={styles.title}>{t['contacts']}</p>
                         <p className={styles.link}>+998 91 008-02-85</p>
                         <p className={styles.link}>+998 90 129-50-09</p>
                         <p className={styles.link}>info@fcc.uz</p>
                     </div>
                     <div className={styles.col}>
-                        <p className={styles.title}>Время работы</p>
+                        <p className={styles.title}>{t['working_hours']}</p>
                         <p className={styles.link}>Пн. – Сб.: с 9:00 до 18:00</p>
                     </div>
                     <div className={styles.col}>
-                        <p className={styles.title}>Мы в соц. сетях</p>
+                        <p className={styles.title}>{t['our_socialmedia']}</p>
                         <div className={styles.soc}>
                             <a target='_blank' href="https://www.instagram.com/bm_academy.uz/" className={styles.socLink}>
                                 <svg width="48" height="49" viewBox="0 0 48 49" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -65,7 +73,7 @@ const Footer = () => {
                             </clipPath>
                             </defs> 
                         </svg>
-                        <p>Разработка сайтов</p>
+                        <p>{t['website_development']}</p>
                     </a>
                 </div>
             </div>
