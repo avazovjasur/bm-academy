@@ -136,25 +136,74 @@
         }
 
         .card {
-            @include res('width', 278.66px);
             height: 100%;
+            transition: all 200ms;
+            position: relative;
             @include res('border-radius', 24px);
             @include res('margin-right', -40px);
-            transition: all 200ms;
+            @include res('width', 278.66px);
             @include res('padding-top', 36px);
             @include res('padding-left', 42px);
             @include res('padding-right', 50px);
             @include res('padding-bottom', 54px);
-            position: relative;
 
             @include media(576){
                 width: 100% !important;
+                background-color: #1143f8 !important;
                 @include resa('border-radius', 24px);
                 @include resa('padding-top', 20px);
                 @include resa('padding-left', 20px);
                 @include resa('padding-right', 20px);
                 @include resa('padding-bottom', 20px);
-                background-color: #1143f8 !important;
+            }
+
+            .brand {
+                position: absolute;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: flex-start;
+                @include resl('right', 50px);
+                @include resl('top', 65px);
+
+                @include media(1200){
+                    @include res('right', 30px);
+                    @include res('top', 46px);
+                }
+
+                @include media(576){
+                    @include resa('right', 30px);
+                    @include resa('top', 32px);
+                }
+
+                svg {
+                    &:nth-child(1) {
+                        @include resl('width', 93px);
+                        @include resl('height', 30px);
+
+                        @include media(1200){
+                            @include res('width', 93px);
+                            @include res('height', 30px);
+                        }
+
+                        @include media(576){
+                            @include resa('width', 93px);
+                            @include resa('height', 30px);
+                        }
+                    }
+                }
+
+                img {
+                    @include resl('width', 63px);
+                    @include resl('height', 80px);
+                }
+
+                p {
+                    color: white;
+                    @include resl('font-size', 30px);
+                    @include resl('padding-top', 6px);
+                    @include resl('padding-bottom', 6px);
+                }
             }
 
             &:hover {

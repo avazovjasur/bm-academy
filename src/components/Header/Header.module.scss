@@ -85,6 +85,48 @@
     justify-content: center;
     @include resa('gap', 22px);
 
+    .dropDown {
+        display: flex;
+        position: absolute;
+        @include resa('right', 22px);
+        @include resa('top', 22px);
+
+        &Lang {
+            @include resa('border-width', 1px);
+        }
+
+        &Label {
+            @include resa('padding', 14px);
+            @include resa('padding-right', 12px);
+            @include resa('padding-left', 16px);
+            @include resa('gap', 10px);
+            @include resa('border-radius', 44px);
+            @include resa('font-size', 16px);
+
+            svg {
+                @include resa('width', 20px);
+                @include resa('height', 20px);
+            }
+        }
+
+        &Inner {
+            left: auto;
+            right: 0;
+            transform: translate(0, 100%);
+            @include resa('min-width', 140px);
+            @include resa('border-radius', 20px);
+            @include resa('border-width', 1px);
+        }
+    
+        &Btn {
+            @include resa('line-height', 16.2px);
+            @include resa('font-size', 14px);
+            @include resa('padding', 14px);
+            @include resa('padding-right', 12px);
+            @include resa('padding-left', 16px);
+        }
+    }
+
     &.active {
         transform: translate(0, 0) scale(1);
         opacity: 1;
@@ -141,25 +183,20 @@
         @include res('border-width', 1px);
     }
 
-    &:hover .dropDownInner {
-        opacity: 1;
-        pointer-events: all;
-    }
-
     &Label {
         position: relative;
-        @include res('padding', 14px);
-        @include res('padding-right', 12px);
-        @include res('padding-left', 16px);
-        @include res('gap', 10px);
-        @include res('border-radius', 44px);
         background-color: #F6F7F8;
         display: flex;
         align-items: center;
         justify-content: center;
         font-family: Onest;
-        @include res('font-size', 16px);
         font-weight: 500;
+        @include res('padding', 14px);
+        @include res('padding-right', 12px);
+        @include res('padding-left', 16px);
+        @include res('gap', 10px);
+        @include res('border-radius', 44px);
+        @include res('font-size', 16px);
 
         svg {
             @include res('width', 20px);
@@ -168,9 +205,7 @@
     }
 
     &Inner {
-        @include res('min-width', 140px);
         position: absolute;
-        bottom: 0;
         left: 50%;
         transform: translate(-50%, 100%);
         background-color: #F6F7F8;
@@ -178,25 +213,32 @@
         align-items: center;
         justify-content: center;
         flex-direction: column;
-        @include res('border-radius', 20px);
         overflow: hidden;
         opacity: 0;
         pointer-events: none;
         transition: opacity 200ms;
         border: solid #E8ECF5;
+        @include res('bottom', -10px);
+        @include res('min-width', 140px);
+        @include res('border-radius', 20px);
         @include res('border-width', 1px);
+
+        &.active {
+            opacity: 1;
+            pointer-events: all;
+        }
     }
 
     &Btn {
         width: 100%;
         background-color: white;
+        font-family: Onest;
+        font-weight: 500;
+        @include res('line-height', 16.2px);
+        @include res('font-size', 14px);
         @include res('padding', 14px);
         @include res('padding-right', 12px);
         @include res('padding-left', 16px);
-        font-family: Onest;
-        @include res('font-size', 14px);
-        @include res('line-height', 16.2px);
-        font-weight: 500;
 
         &:hover {
             background-color: #e4e4e4;
