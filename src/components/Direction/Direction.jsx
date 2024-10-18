@@ -40,7 +40,7 @@ const Direction = () => {
                         <p className={styles.text}>{t['it_text1']}</p>
                         <div className={styles.brand}>
                             <svg width="93" height="30" viewBox="0 0 93 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <g clip-path="url(#clip0_3009_1039)">
+                                <g clipPath="url(#clip0_3009_1039)">
                                 <mask id="mask0_3009_1039" style={{maskType:"alpha"}} maskUnits="userSpaceOnUse" x="0" y="0" width="93" height="30">
                                 <path d="M92.3894 0H0V30H92.3894V0Z" fill="#D9D9D9"/>
                                 </mask>

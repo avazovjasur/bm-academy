@@ -1,8 +1,16 @@
 import React, { useState } from 'react'
+import { useRouter } from 'next/router';
+
+import en from '@/locales/en';
+import uz from '@/locales/uz';
+import ru from '@/locales/ru';
 
 import styles from './Popup.module.scss'
 
 const Popup = ({popup, setPopup}) => {
+    const router = useRouter();
+    const { locale } = router;
+    const t = locale === 'uz' ? uz : locale === 'en' ? en : ru;
     const [name, setName] = useState("")
     const [phone, setPhone] = useState("")
     const [text, setText] = useState("Выберите направление")
@@ -32,20 +40,18 @@ const Popup = ({popup, setPopup}) => {
         const { message: resMessage } = await response.json();
     
         setPopup(false)
-        
-
-    };
+    }
 
     return (
         <div className={`${styles.popup} ${popup && styles.active}`}>
             <div className={`${styles.overlay}`} onClick={()=>setPopup(false)}></div>
             <form onSubmit={handleSubmit} className={styles.content}>
-                <p className={styles.title}>Оставить заявку</p>
-                <input required className={styles.input} value={name} onChange={(e) => {setName(e.target.value)}} type="text" placeholder='Имя'/>
-                <input required className={styles.input} value={phone} onChange={(e) => {setPhone(e.target.value)}} type="text" placeholder='Номер телефона'/>
+                <p className={styles.title}>{t['order_call1']}</p>
+                <input required className={styles.input} value={name} onChange={(e) => {setName(e.target.value)}} type="text" placeholder={t['name']}/>
+                <input required className={styles.input} value={phone} onChange={(e) => {setPhone(e.target.value)}} type="text" placeholder={t['phone_number']} />
                 <div className={styles.input}>
                     <select required value={text} onChange={(e) => {setText(e.target.value)}}>
-                        <option value="Выберите направлению">Выберите направлению</option>
+                        <option value="Выберите направлению">{t['choose_direction']}</option>
                         <option value="строительство">Строительство</option>
                         <option value="обучение">Обучение</option>
                         <option value="информационные технологии">Информационные технологии</option>
@@ -53,7 +59,7 @@ const Popup = ({popup, setPopup}) => {
                         <option value="продажи">Продажи</option>
                     </select>
                 </div>
-                <button type="submit" className={styles.btn}>Оставить заявку</button>
+                <button type="submit" className={styles.btn}>{t['leave_request']}</button>
             </form>
         </div>
     )

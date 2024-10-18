@@ -3,6 +3,7 @@ const en = {
     'direction': 'Directions',
     'contacts': 'Contacts',
     'order_call': 'Order a Call',
+    'order_call1': 'Order a Call',
     'welcome_to': 'Welcome to',
     'territory_of_education': 'Territory of Education',
     'leave_request': 'Leave a Request',
@@ -32,7 +33,7 @@ const en = {
     'what_we_offer': 'What We Offer',
     'automation': 'Automation',
     'height': 'Growth',
-    'arch_logistics': 'ARCHITECTURE LOGISTICS',
+    'arch_logistics': 'construction methodology',
     'our_directions_on_iso': 'OUR DIRECTIONS ON ISO CERTIFICATES',
     'automation': 'AUTOMATION',
     'your_business': 'YOUR BUSINESS',
@@ -53,6 +54,9 @@ const en = {
     'working_hours': 'Working Hours',
     'our_socialmedia': 'We are on social media',
     'website_development': 'Website Development',
+    'name': 'Name',
+    'phone_number': 'Phone number',
+    'choose_direction': 'Choose direction',
 }
 
 export default en

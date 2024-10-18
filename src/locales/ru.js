@@ -3,6 +3,7 @@ const ru = {
     'direction': 'Направления',
     'contacts': 'Контакты',
     'order_call': 'Заказать звонок',
+    'order_call1': 'Заказать звонок',
     'welcome_to': 'Добро пожаловать',
     'territory_of_education': 'Территория образования',
     'leave_request': 'Оставить заявку',
@@ -32,7 +33,7 @@ const ru = {
     'what_we_offer': 'Что мы предлагаем',
     'automation': 'Автоматизацию',
     'height': 'Рост',
-    'arch_logistics': 'АРХИТЕКТУРА ЛОГИСТИКА',
+    'arch_logistics': 'методика строительства',
     'our_directions_on_iso': 'НАШИ НАПРАВЛЕНИЯ ПО ISO СЕРТИФИКАТАМ',
     'automation': 'АВТОМАТИЗАЦИЯ',
     'your_business': 'вашего бизнеса',
@@ -53,6 +54,9 @@ const ru = {
     'working_hours': 'Время работы',
     'our_socialmedia': 'Мы в соц. сетях',
     'website_development': 'Разработка сайтов',
+    'name': 'Имя',
+    'phone_number': 'Номер телефона',
+    'choose_direction': 'Выберите направление',
 }
 
 export default ru
