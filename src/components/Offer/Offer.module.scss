@@ -57,7 +57,7 @@
   @include media(576) {
     width: 100%;
     margin-right: 0;
-    @include resa("height", 360px);
+    @include resa("height", 560px);
     @include resa("padding", 32px);
     @include resa("border-radius", 32px);
     @include resa("margin-bottom", 24px);
@@ -72,9 +72,8 @@
     @include res("line-height", 61.25px);
 
     @include media(576) {
-      @include resa("width", 419px);
-      @include resa("font-size", 48px);
-      @include resa("line-height", 61.25px);
+      @include resa("font-size", 30px);
+      @include resa("line-height", 31.25px);
     }
   }
 
@@ -86,7 +85,7 @@
     @include res("gap", 6px);
 
     @include media(576) {
-      @include resa("gap", 8px);
+      @include resa("gap", 6px);
       align-items: flex-start;
       justify-content: flex-start;
       flex-wrap: wrap;
@@ -113,24 +112,12 @@
       @include res("border-width", 1px);
 
       @include media(576) {
-        @include resa("border-radius", 16px);
-        @include resa("padding", 16px);
-        @include resa("font-size", 21px);
-        @include resa("line-height", 25.2px);
+        @include resa("border-radius", 12px);
+        @include resa("padding", 6px);
+        @include resa("font-size", 14px);
+        @include resa("line-height", 20.2px);
         @include resa("border-width", 1px);
         text-align: center;
-
-        &:nth-child(1) {
-          width: 100%;
-        }
-
-        &:nth-child(2) {
-          @include resa("width", 120px);
-        }
-
-        &:nth-child(3) {
-          @include resa("width", 160px);
-        }
       }
     }
   }
