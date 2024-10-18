@@ -33,7 +33,7 @@ const ru = {
     'what_we_offer': 'Что мы предлагаем',
     'automation': 'Автоматизацию',
     'height': 'Рост',
-    'arch_logistics': 'методика строительства',
+    'arch_logistics': 'АРХИТЕКТУРА ЛОГИСТИКА',
     'our_directions_on_iso': 'НАШИ НАПРАВЛЕНИЯ ПО ISO СЕРТИФИКАТАМ',
     'automation': 'АВТОМАТИЗАЦИЯ',
     'your_business': 'вашего бизнеса',

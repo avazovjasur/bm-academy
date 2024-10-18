@@ -68,7 +68,6 @@
     font-weight: 700;
     text-align: left;
     cursor: default;
-    @include res("width", 419px);
     @include res("font-size", 48px);
     @include res("line-height", 61.25px);
 
@@ -82,8 +81,9 @@
   .offers {
     display: flex;
     align-items: center;
-    justify-content: center;
-    @include res("gap", 8px);
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    @include res("gap", 6px);
 
     @include media(576) {
       @include resa("gap", 8px);
@@ -106,10 +106,10 @@
       text-align: left;
       color: white;
       cursor: default;
-      @include res("border-radius", 16px);
-      @include res("padding", 16px);
-      @include res("font-size", 21px);
-      @include res("line-height", 25.2px);
+      @include res("border-radius", 12px);
+      @include res("padding", 6px);
+      @include res("font-size", 14px);
+      @include res("line-height", 20.2px);
       @include res("border-width", 1px);
 
       @include media(576) {
@@ -210,11 +210,11 @@
     text-align: left;
     color: white;
     text-transform: uppercase;
-    @include res("font-size", 36px);
+    @include res("font-size", 44px);
     @include res("line-height", 52.8px);
 
     @include media(576) {
-      @include resa("font-size", 36px);
+      @include resa("font-size", 44px);
       @include resa("line-height", 52.8px);
     }
 
@@ -413,10 +413,10 @@
 
 .stats {
   display: flex;
+  flex-direction: column;
   align-items: flex-start;
   justify-content: space-between;
-  flex-direction: column;
-  background-color: #000000;
+  background-color: black;
   overflow: hidden;
   position: relative;
   @include res("padding", 20px);
@@ -428,18 +428,18 @@
 
   @include media(576) {
     margin: 0;
+    @include resa("padding", 20px);
     @include resa("width", 360px);
     @include resa("height", 360px);
     @include resa("border-radius", 32px);
     @include resa("margin-bottom", 24px);
-    @include resa("padding", 20px);
   }
 
   &Img {
+    object-fit: cover;
     width: 100%;
     height: 100%;
-    opacity: 0.3;
-    object-fit: cover;
+    opacity: 0.5;
     position: absolute;
     top: 0;
     left: 0;
@@ -448,13 +448,12 @@
   p {
     position: relative;
     color: white;
-    font-family: Onest;
-    font-weight: 600;
-    @include res("font-size", 22px);
+    font-weight: 400;
+    @include res("font-size", 24px);
     @include res("line-height", 30px);
 
     @include media(576) {
-      @include resa("font-size", 22px);
+      @include resa("font-size", 24px);
       @include resa("line-height", 30px);
     }
   }

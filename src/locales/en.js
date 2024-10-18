@@ -33,7 +33,7 @@ const en = {
     'what_we_offer': 'What We Offer',
     'automation': 'Automation',
     'height': 'Growth',
-    'arch_logistics': 'construction methodology',
+    'arch_logistics': 'ARCHITECTURE LOGISTICS',
     'our_directions_on_iso': 'OUR DIRECTIONS ON ISO CERTIFICATES',
     'automation': 'AUTOMATION',
     'your_business': 'YOUR BUSINESS',

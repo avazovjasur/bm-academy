@@ -39,7 +39,7 @@ const uz = {
   what_we_offer: "Biz nimani taklif qilamiz",
   automation: "Avtomatlashtirish",
   height: "O‘sish",
-  arch_logistics: "qurilish metodologiyasi",
+  arch_logistics: "ARXITEKTURA LOGISTIKA",
   our_directions_on_iso: "ISO SERTIFIKATLARI BO‘YICHA YO‘NALISHLARIMIZ",
   automation: "AVTOMATLASH",
   your_business: "SIZNING BIZNESINGIZNI",
