@@ -214,7 +214,7 @@
     @include res("line-height", 52.8px);
 
     @include media(576) {
-      @include resa("font-size", 44px);
+      @include resa("font-size", 36px);
       @include resa("line-height", 52.8px);
     }
 
@@ -428,11 +428,11 @@
 
   @include media(576) {
     margin: 0;
-    @include resa("border-width", 1px);
     @include resa("width", 360px);
     @include resa("height", 360px);
     @include resa("border-radius", 32px);
     @include resa("margin-bottom", 24px);
+    @include resa("padding", 20px);
   }
 
   &Img {
@@ -454,8 +454,8 @@
     @include res("line-height", 30px);
 
     @include media(576) {
-      @include resa("font-size", 32px);
-      @include resa("line-height", 44px);
+      @include resa("font-size", 22px);
+      @include resa("line-height", 30px);
     }
   }
 }
