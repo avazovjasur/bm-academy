@@ -95,7 +95,7 @@ const Offer = () => {
           <div className={styles.stats}>
             <img
               draggable="false"
-              src="vr-exp.png"
+              src="image.png"
               alt=""
               className={styles.statsImg}
             />
