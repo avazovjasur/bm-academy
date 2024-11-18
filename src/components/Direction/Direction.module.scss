@@ -1,403 +1,403 @@
-@import '../../styles/mixins.scss';
+@import "../../styles/mixins.scss";
 
 .direction {
-    @include res('width', 1226px);
-    margin: auto;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-    @include res('padding-top', 100px);
-    @include res('padding-bottom', 100px);
+  @include res("width", 1226px);
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  @include res("padding-top", 100px);
+  @include res("padding-bottom", 100px);
 
-    @include media(576){
-        @include resa('padding-top', 100px);
-        @include resa('padding-bottom', 100px);
-    }
+  @include media(576) {
+    @include resa("padding-top", 100px);
+    @include resa("padding-bottom", 100px);
+  }
 }
 
 .label {
-    font-family: Onest;
-    font-weight: 500;
-    text-align: left;
-    color: white;
-    background-color: #1143f8;
-    @include res('padding', 12px);
-    @include res('padding-left', 16px);
-    @include res('padding-right', 16px);
-    @include res('border-radius', 60px);
-    @include res('margin-bottom', 16px);
-    @include res('font-size', 21px);
-    @include res('line-height', 24px);
+  font-family: Onest;
+  font-weight: 500;
+  text-align: left;
+  color: white;
+  background-color: #1143f8;
+  @include res("padding", 12px);
+  @include res("padding-left", 16px);
+  @include res("padding-right", 16px);
+  @include res("border-radius", 60px);
+  @include res("margin-bottom", 16px);
+  @include res("font-size", 21px);
+  @include res("line-height", 24px);
 
-    @include media(576){
-        @include resa('padding', 12px);
-        @include resa('padding-left', 16px);
-        @include resa('padding-right', 16px);
-        @include resa('border-radius', 60px);
-        @include resa('margin-bottom', 16px);
-        @include resa('font-size', 21px);
-        @include resa('line-height', 24px);
-    }
+  @include media(576) {
+    @include resa("padding", 12px);
+    @include resa("padding-left", 16px);
+    @include resa("padding-right", 16px);
+    @include resa("border-radius", 60px);
+    @include resa("margin-bottom", 16px);
+    @include resa("font-size", 21px);
+    @include resa("line-height", 24px);
+  }
 }
 
 .title {
-    font-family: Onest;
-    font-weight: 700;
-    text-align: left;
-    color: white;
-    @include res('font-size', 48px);
-    @include res('line-height', 56px);
-    @include res('margin-bottom', 20px);
+  font-family: Onest;
+  font-weight: 700;
+  text-align: left;
+  color: white;
+  @include res("font-size", 48px);
+  @include res("line-height", 56px);
+  @include res("margin-bottom", 20px);
 
-    @include media(576){
-        @include resa('font-size', 40px);
-        @include resa('line-height', 56px);
-        @include resa('margin-bottom', 60px);
+  @include media(576) {
+    @include resa("font-size", 40px);
+    @include resa("line-height", 56px);
+    @include resa("margin-bottom", 60px);
 
-        span {
-            display: none;
-        }
+    span {
+      display: none;
     }
+  }
 }
 
 .cards {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  @include res("height", 440px);
+
+  @include media(576) {
+    width: 100%;
+    height: max-content;
+  }
+
+  .leftCard {
+    @include media(576) {
+      display: none !important;
+    }
+  }
+
+  .activeBlocks {
     display: flex;
     align-items: center;
-    justify-content: flex-start;
-    @include res('height', 440px);
+    justify-content: center;
+    height: 100%;
 
-    @include media(576){
+    @include media(576) {
+      width: 100%;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+      @include resa("gap", 20px);
+    }
+
+    .btnText {
+      display: none;
+    }
+
+    .btn {
+      padding: 0;
+      border-radius: 50%;
+    }
+
+    .btnSvg {
+      display: block;
+      @include res("width", 21px);
+      @include res("width", 21px);
+
+      svg {
         width: 100%;
-        height: max-content;
-    }
-
-    .leftCard {
-        @include media(576) {
-            display: none !important;
-        }
-    }
-
-    .activeBlocks {
-        display: flex;
-        align-items: center;
-        justify-content: center;
         height: 100%;
+      }
+    }
 
-        @include media(576){
-            width: 100%;
-            flex-direction: column;
-            align-items: flex-start;
-            justify-content: flex-start;
-            @include resa('gap', 20px);
+    &:not(:hover) .card:nth-child(1) {
+      @include res("width", 390px);
+
+      & .text {
+        height: max-content;
+        overflow: auto;
+        opacity: 1;
+      }
+
+      .btnText {
+        display: inline;
+      }
+
+      .btnSvg {
+        display: none;
+      }
+
+      .btn {
+        @include res("padding-left", 32px, true);
+        @include res("padding-right", 32px, true);
+      }
+    }
+
+    .card {
+      height: 100%;
+      transition: all 200ms;
+      position: relative;
+      @include res("border-radius", 24px);
+      @include res("margin-right", -40px);
+      @include res("width", 308.66px);
+      @include res("padding-top", 36px);
+      @include res("padding-left", 42px);
+      @include res("padding-right", 50px);
+      @include res("padding-bottom", 54px);
+
+      @include media(576) {
+        width: 100% !important;
+        background-color: #1143f8 !important;
+        @include resa("border-radius", 24px);
+        @include resa("padding-top", 20px);
+        @include resa("padding-left", 20px);
+        @include resa("padding-right", 20px);
+        @include resa("padding-bottom", 20px);
+      }
+
+      .brand {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        @include resl("right", 50px);
+        @include resl("top", 65px);
+
+        @include media(1200) {
+          @include res("right", 30px);
+          @include res("top", 46px);
+        }
+
+        @include media(576) {
+          @include resa("right", 30px);
+          @include resa("top", 32px);
+        }
+
+        svg {
+          &:nth-child(1) {
+            @include resl("width", 93px);
+            @include resl("height", 30px);
+
+            @include media(1200) {
+              @include res("width", 93px);
+              @include res("height", 30px);
+            }
+
+            @include media(576) {
+              @include resa("width", 93px);
+              @include resa("height", 30px);
+            }
+          }
+        }
+
+        img {
+          @include resl("width", 63px);
+          @include resl("height", 80px);
+        }
+
+        p {
+          color: white;
+          @include resl("font-size", 30px);
+          @include resl("padding-top", 6px);
+          @include resl("padding-bottom", 6px);
+        }
+      }
+
+      &:hover {
+        @include res("width", 390px);
+
+        & .text {
+          height: max-content;
+          overflow: auto;
+          opacity: 1;
         }
 
         .btnText {
-            display: none;
+          display: inline;
         }
 
         .btn {
-            padding: 0;
-            border-radius: 50%;
+          @include res("padding-left", 32px, true);
+          @include res("padding-right", 32px, true);
         }
 
         .btnSvg {
-            display: block;
-            @include res('width', 21px);
-            @include res('width', 21px);
-
-            svg {
-                width: 100%;
-                height: 100%;
-            }
+          display: none;
         }
+      }
 
-        &:not(:hover) .card:nth-child(1) {
-            @include res('width', 360px);
+      .index {
+        font-family: Onest;
+        font-weight: 700;
+        text-align: left;
+        color: white;
+        @include res("margin-bottom", 16px);
+        @include res("font-size", 48px);
+        @include res("line-height", 56px);
 
-            & .text {
-                height: max-content;
-                overflow: auto;
-                opacity: 1;
-            }
-
-            .btnText {
-                display: inline;
-            }
-
-            .btnSvg {
-                display: none;
-            }
-
-            .btn {
-                @include res('padding-left', 32px, true);
-                @include res('padding-right', 32px, true);
-            }
+        @include media(576) {
+          @include resa("margin-bottom", 20px);
+          @include resa("font-size", 58px);
+          @include resa("line-height", 56px);
         }
+      }
 
-        .card {
-            height: 100%;
-            transition: all 200ms;
-            position: relative;
-            @include res('border-radius', 24px);
-            @include res('margin-right', -40px);
-            @include res('width', 278.66px);
-            @include res('padding-top', 36px);
-            @include res('padding-left', 42px);
-            @include res('padding-right', 50px);
-            @include res('padding-bottom', 54px);
+      .heading {
+        font-family: Onest;
+        font-weight: 600;
+        text-align: left;
+        color: white;
+        @include res("font-size", 32px);
+        @include res("line-height", 36px);
+        @include res("margin-bottom", 32px);
 
-            @include media(576){
-                width: 100% !important;
-                background-color: #1143f8 !important;
-                @include resa('border-radius', 24px);
-                @include resa('padding-top', 20px);
-                @include resa('padding-left', 20px);
-                @include resa('padding-right', 20px);
-                @include resa('padding-bottom', 20px);
-            }
-
-            .brand {
-                position: absolute;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                justify-content: flex-start;
-                @include resl('right', 50px);
-                @include resl('top', 65px);
-
-                @include media(1200){
-                    @include res('right', 30px);
-                    @include res('top', 46px);
-                }
-
-                @include media(576){
-                    @include resa('right', 30px);
-                    @include resa('top', 32px);
-                }
-
-                svg {
-                    &:nth-child(1) {
-                        @include resl('width', 93px);
-                        @include resl('height', 30px);
-
-                        @include media(1200){
-                            @include res('width', 93px);
-                            @include res('height', 30px);
-                        }
-
-                        @include media(576){
-                            @include resa('width', 93px);
-                            @include resa('height', 30px);
-                        }
-                    }
-                }
-
-                img {
-                    @include resl('width', 63px);
-                    @include resl('height', 80px);
-                }
-
-                p {
-                    color: white;
-                    @include resl('font-size', 30px);
-                    @include resl('padding-top', 6px);
-                    @include resl('padding-bottom', 6px);
-                }
-            }
-
-            &:hover {
-                @include res('width', 360px);
-
-                & .text {
-                    height: max-content;
-                    overflow: auto;
-                    opacity: 1;
-                }
-
-                .btnText {
-                    display: inline;
-                }
-
-                .btn {
-                    @include res('padding-left', 32px, true);
-                    @include res('padding-right', 32px, true);
-                }
-
-                .btnSvg {
-                    display: none;
-                }
-            }
-
-            .index {
-                font-family: Onest;
-                font-weight: 700;
-                text-align: left;
-                color: white;
-                @include res('margin-bottom', 16px);
-                @include res('font-size', 48px);
-                @include res('line-height', 56px);
-
-                @include media(576){
-                    @include resa('margin-bottom', 20px);
-                    @include resa('font-size', 58px);
-                    @include resa('line-height', 56px);
-                }
-            }
-
-            .heading {
-                font-family: Onest;
-                font-weight: 600;
-                text-align: left;
-                color: white;
-                @include res('font-size', 32px);
-                @include res('line-height', 36px);
-                @include res('margin-bottom', 32px);
-
-                @include media(576){
-                    @include resa('font-size', 32px);
-                    @include resa('line-height', 36px);
-                    @include resa('margin-bottom', 32px);
-                }
-            }
-
-            .text {
-                font-family: Onest;
-                font-weight: 400;
-                text-align: left;
-                color: white;
-                height: 0;
-                overflow: hidden;
-                opacity: 0;
-                transition: opacity 200ms;
-                @include res('width', 268px);
-                @include res('font-size', 17px);
-                @include res('line-height', 20px);
-
-                @include media(576){
-                    width: 100%;
-                    @include resa('font-size', 17px);
-                    @include resa('line-height', 20px);
-                    opacity: 1 !important;
-                    height: max-content !important;
-                    width: 100% !important;
-                }
-            }
-
-            .btn {
-                position: absolute;
-                font-family: Onest;
-                font-weight: 500;
-                text-align: left;
-                box-shadow: 0px 4px 16px 0px #00000014;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                @include res('height', 50px);
-                @include res('padding-left', 32px);
-                @include res('padding-right', 32px);
-                @include res('border-radius', 44px);
-                @include res('font-size', 17px);
-                @include res('line-height', 22px);
-                @include res('left', 42px);
-                @include res('bottom', 24px);
-
-                @include media(576){
-                    position: relative;
-                    left: 0 !important;
-                    bottom: 0;
-                    width: 100%;
-                    font-weight: 500;
-                    @include resa('height', 50px);
-                    @include resa('padding-left', 32px);
-                    @include resa('padding-right', 32px);
-                    @include resa('border-radius', 44px);
-                    @include resa('font-size', 17px);
-                    @include resa('line-height', 22px);
-                    @include resa('margin-top', 30px);
-
-                    .btnText {
-                        display: block !important;
-                        color: #1143f8 !important;
-                    }
-
-                    .btnSvg {
-                        display: none !important;
-                    }
-                }
-            }
-    
-            &:nth-child(1) {
-                background: #1143f8;
-                z-index: 4;
-
-                .btn {
-                    color: #1143f8;
-                }
-            }
-    
-            &:nth-child(2) {
-                background: #0c32bd;
-                z-index: 3;
-                @include res('padding-left', 70px);
-
-                .text {
-                    @include res('width', 250px);
-                }
-
-                .btn {
-                    @include res('left', 62px);
-                    color: #0c32bd;
-                }
-            }
-
-            &:nth-child(3) {
-                background: #09299c;
-                z-index: 2;
-                @include res('padding-left', 70px);
-
-                .text {
-                    @include res('width', 250px);
-                }
-
-                .btn {
-                    @include res('left', 62px);
-                    color: #09299c;
-                }
-            }
-
-            &:nth-child(4) {
-                background: #071c66;
-                z-index: 1;
-                @include res('padding-left', 70px);
-
-                .text {
-                    @include res('width', 250px);
-                }
-
-                .btn {
-                    @include res('left', 62px);
-                    color: #071c66;
-                }
-            }
+        @include media(576) {
+          @include resa("font-size", 32px);
+          @include resa("line-height", 36px);
+          @include resa("margin-bottom", 32px);
         }
-    }
+      }
 
-    .leftCard {
-        @include res('width', 216px);
-        height: 100%;
-        background-color: white;
+      .text {
+        font-family: Onest;
+        font-weight: 400;
+        text-align: left;
+        color: white;
+        height: 0;
+        overflow: hidden;
+        opacity: 0;
+        transition: opacity 200ms;
+        @include res("width", 268px);
+        @include res("font-size", 17px);
+        @include res("line-height", 20px);
+
+        @include media(576) {
+          width: 100%;
+          @include resa("font-size", 17px);
+          @include resa("line-height", 20px);
+          opacity: 1 !important;
+          height: max-content !important;
+          width: 100% !important;
+        }
+      }
+
+      .btn {
+        position: absolute;
+        font-family: Onest;
+        font-weight: 500;
+        text-align: left;
+        box-shadow: 0px 4px 16px 0px #00000014;
         display: flex;
         align-items: center;
-        justify-content: flex-start;
-        @include res('padding-left', 24px);
-        @include res('margin-right', -66px);
-        pointer-events: none;
-        @include res('border-radius', 24px);
+        justify-content: center;
+        @include res("height", 50px);
+        @include res("padding-left", 32px);
+        @include res("padding-right", 32px);
+        @include res("border-radius", 44px);
+        @include res("font-size", 17px);
+        @include res("line-height", 22px);
+        @include res("left", 42px);
+        @include res("bottom", 24px);
 
-        img {
-            @include res('width', 122px);
-            @include res('height', 124px);
+        @include media(576) {
+          position: relative;
+          left: 0 !important;
+          bottom: 0;
+          width: 100%;
+          font-weight: 500;
+          @include resa("height", 50px);
+          @include resa("padding-left", 32px);
+          @include resa("padding-right", 32px);
+          @include resa("border-radius", 44px);
+          @include resa("font-size", 17px);
+          @include resa("line-height", 22px);
+          @include resa("margin-top", 30px);
+
+          .btnText {
+            display: block !important;
+            color: #1143f8 !important;
+          }
+
+          .btnSvg {
+            display: none !important;
+          }
         }
+      }
+
+      &:nth-child(1) {
+        background: #1143f8;
+        z-index: 4;
+
+        .btn {
+          color: #1143f8;
+        }
+      }
+
+      &:nth-child(2) {
+        background: #0c32bd;
+        z-index: 3;
+        @include res("padding-left", 70px);
+
+        .text {
+          @include res("width", 250px);
+        }
+
+        .btn {
+          @include res("left", 62px);
+          color: #0c32bd;
+        }
+      }
+
+      &:nth-child(3) {
+        background: #09299c;
+        z-index: 2;
+        @include res("padding-left", 70px);
+
+        .text {
+          @include res("width", 250px);
+        }
+
+        .btn {
+          @include res("left", 62px);
+          color: #09299c;
+        }
+      }
+
+      &:nth-child(4) {
+        background: #071c66;
+        z-index: 1;
+        @include res("padding-left", 70px);
+
+        .text {
+          @include res("width", 250px);
+        }
+
+        .btn {
+          @include res("left", 62px);
+          color: #071c66;
+        }
+      }
     }
+  }
+
+  .leftCard {
+    @include res("width", 206px);
+    height: 100%;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    @include res("padding-left", 24px);
+    @include res("margin-right", -176px);
+    pointer-events: none;
+    @include res("border-radius", 24px);
+
+    img {
+      @include res("width", 122px);
+      @include res("height", 124px);
+    }
+  }
 }

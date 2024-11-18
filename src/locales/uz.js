@@ -27,9 +27,9 @@ const uz = {
   construction_text1:
     "Biz qurilish jarayonlarini avtomatlashtiramiz: loyihalarni boshqarish, materiallarni hisobga olish, moliya nazorati, hujjat almashinuvi va xodimlarni boshqarish samaradorligini oshirish uchun.",
   look: "Ko‘rish",
-  it: "IT",
+  it: "Ta'lim",
   it_text1:
-    "Biz IT ni avtomatlashtiramiz: loyihalarni boshqarish, tizimlarni monitoring qilish, ma’lumotlar va resurslarni boshqarish samaradorligini va xavfsizligini oshirish uchun.",
+    "Loyihalarni boshqarish, tizimlarni monitoring qilish, ma’lumotlar va resurslarni boshqarish samaradorligini va xavfsizligini oshirish uchun.",
   sales: "Savdolar",
   sales_text1:
     "Biz marketpleyslardagi savdolarni avtomatlashtiramiz: mahsulotlarni boshqarish, buyurtmalar, tahlil va narxlash orqali daromadni oshirish va jarayonlarni soddalashtirish.",
